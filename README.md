@@ -1,18 +1,11 @@
-
-*Please do the following:*
-
-1. Edit this readme file first
-
-2. Read './document/README.md' for instructions about team repo submissions.
-
-
 # Team Project Repo 
 
 ## Team Name
+Pied Piper
 
 ## Team Members
 
-* [Name](url_to_your_github_repo)
+* [Alan](https://github.com/athsueh)
 
 ## Project Name
 
