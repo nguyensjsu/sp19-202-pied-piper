@@ -7,7 +7,7 @@ Pied Piper
 
 * [Alan](https://github.com/athsueh)
 * [Haoran](https://github.com/HaoRanChen123)
-* [Jake/Ilsoo Kim](https://github.com/jake-ilsoo-kim)
+* [Jake (Ilsoo Kim)](https://github.com/jake-ilsoo-kim)
 * [Janet](https://github.com/treetree0211)
 * [Prachi](https://github.com/)
 
