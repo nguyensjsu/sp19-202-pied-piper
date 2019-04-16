@@ -12,9 +12,11 @@ public class Snake extends Actor
      * Act - do whatever the Snake wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    int speed = 2;
+    
     public void act() 
     {
-        move(4);
+        move(speed);
         if (Greenfoot.isKeyDown("left"))
         {
             setRotation(180);
@@ -30,6 +32,15 @@ public class Snake extends Actor
         if (Greenfoot.isKeyDown("down"))
         {
             setRotation(90);
+        }
+        
+        if(isTouching(PowerUp.class)){
+            speed++;
+        }  
+        
+        if(isAtEdge()){
+            Greenfoot.playSound("Hiss.mp3");
+            Greenfoot.stop();
         }
     }    
 }
