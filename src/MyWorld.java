@@ -29,5 +29,7 @@ public class MyWorld extends World
         addObject(new Snake(), 90, 90);
         Food food = new Food();
         addObject(food,527,125);
+        PowerUp powerUp = new PowerUp();
+        addObject(powerUp,371,199);
     }
 }
