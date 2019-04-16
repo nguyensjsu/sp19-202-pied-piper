@@ -8,7 +8,7 @@ Pied Piper
 * [Alan](https://github.com/athsueh)
 * [Haoran](https://github.com/HaoRanChen123)
 * [Jake](https://github.com/)
-* [Janet](https://github.com/)
+* [Janet](https://github.com/treetree0211)
 * [Prachi](https://github.com/)
 
 ## Project Name
