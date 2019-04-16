@@ -1,0 +1,22 @@
+Prachi
+
+Finished Last Week
+	•	Task1: Game ideas initiated and discussed. 
+	•	Task2: Made decision on what pattern idea will be implemented.
+
+Planned Next Week
+	•	Task1: Implement Observer pattern for achievements unlock system for snake game.
+	•	Task2: Work on initial structure of class.
+
+Problems
+	•	(no blockers this week)
+
+Time Spend
+	•	Task1: 2 hrs
+	•	Task2: 2 hrs
+
+Prachi
+	•	XP Core Value: Simplicity
+	•	This week started with simplest thing that could possibly work. Taken small simple steps towards our goal as discussed about ‘what to implement and how to implement’ and for now there were no blockers.
+	•	Created something that we will be able to maintain it . Not implemented feature that were not essentially required and will enhance at later stage of implementation.
+	•	Overall, the value of simplicity was superb, and will continue to do so for next week.
