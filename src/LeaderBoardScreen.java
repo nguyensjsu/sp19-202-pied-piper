@@ -9,8 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class LeaderBoardScreen extends World
 {
 
-    public Label label;
-         
+    private LeaderBoardComponent leaderboardcomponent;
+    
     /**
      * Constructor for objects of class BackGround.
      * 
@@ -25,18 +25,23 @@ public class LeaderBoardScreen extends World
         private void prepare()
     {
         
-         
-        Label label = new Label("LEADER BOARD");
-        addObject(label, 280, 75);
+        leaderboardcomponent = new LeaderBoardComposite();
         
-        UserInfo userinfo = new UserInfo();
-        addObject(userinfo,180,125);  
+        LeaderBoardComponent LeaderBoardbackground1 = new LeaderBoardBackground();
+        addObject(LeaderBoardbackground1, 100,300);
+        leaderboardcomponent.addChild(LeaderBoardbackground1);
+       
+        //LeaderBoardComponent leaderBoard = LeaderBoard.getLeaderBoard() ;
+        //leaderBoard.printDescription();
         
-        UserInfo userinfo2 = new UserInfo();
-        addObject(userinfo2,180,225);
+        //UserInfo userinfo = new UserInfo();
+        //addObject(userinfo,180,125);  
         
-        UserInfo userinfo3 = new UserInfo();
-        addObject(userinfo3,180,325);
+        //UserInfo userinfo2 = new UserInfo();
+        //addObject(userinfo2,180,225);
+        
+        //UserInfo userinfo3 = new UserInfo();
+        //addObject(userinfo3,180,325);
     }
     
 }

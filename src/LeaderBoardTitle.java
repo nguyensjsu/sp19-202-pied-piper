@@ -6,13 +6,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Label extends LeaderBoard
+public class LeaderBoardTitle extends LeaderBoardComponent
 {
     
-    public Label(String text)
+    public LeaderBoardTitle(String text)
     {
     GreenfootImage img = new GreenfootImage(100,150);
     img.drawString(text, 6, 60);
+    System.out.println(text);
     setImage (img);
     }
     
@@ -23,5 +24,11 @@ public class Label extends LeaderBoard
     public void act() 
     {
         // Add your action code here.
-    }    
+    } 
+    public void printDescription() {}
+    public void addChild(LeaderBoardComponent c){}
+    public void removeChild(LeaderBoardComponent c){}
+     public LeaderBoardComponent getChild(int i){
+        return null;
+    }
 }
