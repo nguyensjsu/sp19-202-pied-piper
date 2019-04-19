@@ -19,7 +19,7 @@ public class LeaderBoardBackground extends LeaderBoardComponent
        setRotation(90);
     }
     
-    public void printDescription() {}
+    public void printOnScreen() {}
     public void addChild(LeaderBoardComponent c){}
     public void removeChild(LeaderBoardComponent c){}
      public LeaderBoardComponent getChild(int i){
