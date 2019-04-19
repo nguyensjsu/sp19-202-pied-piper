@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class LeaderBoardScreen extends World
 {
 
+    public Label label;
+         
     /**
      * Constructor for objects of class BackGround.
      * 
@@ -23,6 +25,7 @@ public class LeaderBoardScreen extends World
         private void prepare()
     {
         
+         
         Label label = new Label("LEADER BOARD");
         addObject(label, 280, 75);
         
