@@ -12,8 +12,28 @@ public class ScoreBoard extends Board
      * Act - do whatever the ScoreBoard wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    int foodcount=0;
+    int powerupcount=0;
+    int score=0;
     public void act() 
     {
         // Add your action code here.
-    }    
+    }
+
+    @Override
+    public void update(Item item) {
+           if (item instanceof Food){
+               foodcount+=1;
+               score=score+powerupcount*2;
+           }
+           else {
+               powerupcount+=1;
+           }
+
+    }
+    public int getscore(){
+
+        return score;
+    }
+
 }

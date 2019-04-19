@@ -9,6 +9,7 @@ import java.util.List;
  */
 public class Food extends Item implements Subject
 {
+    protected  int count;
     List<Board> list= new ArrayList <Board>();
     /**
      * Act - do whatever the Food wants to do. This method is called whenever
@@ -18,6 +19,7 @@ public class Food extends Item implements Subject
     {
         if(isTouching(Snake.class)){
             Greenfoot.playSound("Eat.mp3");
+            mynotify();
         }  
         super.act();
     }  
@@ -26,6 +28,8 @@ public class Food extends Item implements Subject
     };
     public void remove(){};
     public void mynotify(){
-    
+    for(int i=0;i<list.size();i++){
+        list.get(i).update(this);
+    }
     };
 }

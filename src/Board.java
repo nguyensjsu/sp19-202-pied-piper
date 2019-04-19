@@ -12,13 +12,37 @@ public class Board extends Actor implements Observer
      * Act - do whatever the Board wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private int boardlength;
-    private int boardwidth;
-    private int score;
+    protected int boardlength=0;
+    protected int boardwidth=0;
+   protected int score=0;
     public void act() 
     {
         // Add your action code here.
     }
     public void show(){}
     public void update(){}
+
+    public int getBoardlength() {
+        return boardlength;
+    }
+
+    public int getBoardwidth() {
+        return boardwidth;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setBoardlength(int boardlength) {
+        this.boardlength = boardlength;
+    }
+
+    public void setBoardwidth(int boardwidth) {
+        this.boardwidth = boardwidth;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
 }

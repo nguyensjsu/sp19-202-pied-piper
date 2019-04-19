@@ -33,11 +33,11 @@ public class MyWorld extends World
        
         Food food = new Food();
         food.attach(foodboard);
-        food.attach(powerupboard);
+
         food.attach(scoreboard);
         
         PowerUp powerUp = new PowerUp();
-        powerUp.attach(foodboard);
+
         powerUp.attach(powerupboard);
         powerUp.attach(scoreboard);
         

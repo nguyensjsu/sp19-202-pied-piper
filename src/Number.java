@@ -1,23 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class PowerUpBoard here.
+ * Write a description of class Number here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PowerUpBoard extends Board
+public class Number extends Item
 {
     /**
-     * Act - do whatever the PowerUpBoard wants to do. This method is called whenever
+     * Act - do whatever the Number wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
         // Add your action code here.
+    } 
+    public void showImage(){
+        
     }
-    public void update(PowerUp powerUp){
-    powerUp.count=powerUp.count+1;
-    }
-    
 }
