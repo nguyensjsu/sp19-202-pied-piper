@@ -26,10 +26,30 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-        addObject(new Snake(), 90, 90);
+        Snake snake=new Snake();
+        PowerUpBoard powerupboard=new  PowerUpBoard();
+        FoodBoard foodboard=new FoodBoard();
+        ScoreBoard scoreboard=new ScoreBoard();
+       
         Food food = new Food();
-        addObject(food,527,125);
+        food.attach(foodboard);
+        food.attach(powerupboard);
+        food.attach(scoreboard);
+        
         PowerUp powerUp = new PowerUp();
+        powerUp.attach(foodboard);
+        powerUp.attach(powerupboard);
+        powerUp.attach(scoreboard);
+        
+        addObject(snake, 90, 90);
+        addObject(food,527,125);
+        addObject(new FoodBoard(),20,20);
+        addObject(new PowerUpBoard(),600-20,20);
+        addObject(new ScoreBoard(),600/2,20);
+        
+        
+        
+  
         addObject(powerUp,371,199);
     }
 }

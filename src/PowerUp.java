@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PowerUp extends Item
+public class PowerUp extends Item implements Subject
 {
     /**
      * Act - do whatever the PowerUp wants to do. This method is called whenever
@@ -19,4 +19,7 @@ public class PowerUp extends Item
         }  
         super.act();
     }    
+    public void attach(Board board){};
+    public void remove(){};
+    public void mynotify(){};
 }
