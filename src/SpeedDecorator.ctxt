@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=SpeedDecorator
-comment0.text=\n\ Snake\ color\ decorator\ \n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=speed
-comment1.target=int\ increaseSpeed(int)
-comment1.text=\n\ Act\ -\ do\ whatever\ the\ PowerUp\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
-comment2.params=speed
-comment2.target=int\ decreaseSpeed(int)
-numComments=3

@@ -15,15 +15,29 @@ public class Snake extends Actor
     //int speed = 2;
     private int speed;
     private ISpeedDecorator speedDecorator;
+    private IColorDecorator colorDecorator;
+    private int snakeLength;
+    private Color snakeColor;
+    private GreenfootImage snakeImage;
 
     public Snake(){
         speed = 1;
+        snakeLength = 20;
+        snakeColor = Color.GREEN;
+        snakeImage = new GreenfootImage(snakeLength, snakeLength);
+        snakeImage.setColor(snakeColor);
+        snakeImage.fill();
+        setImage(snakeImage);
     }
 
-    public void wrapDecorator(ISpeedDecorator sd) {
+    public void wrapSpeedDecorator(ISpeedDecorator sd) {
         this.speedDecorator = sd;
     }
-  
+    
+    public void wrapColorDecorator(IColorDecorator cd) {
+        this.colorDecorator = cd;
+    }
+
     
     public void act() 
     {
@@ -48,7 +62,16 @@ public class Snake extends Actor
         if(isTouching(PowerUp.class)){
             //speed++;
             speed = speedDecorator.increaseSpeed(speed);
-        }  
+        } 
+        // add length when snake eats apple
+        if (isTouching(Food.class)) {
+            snakeLength += 50;
+            snakeImage = new GreenfootImage(snakeLength, 20);
+            snakeColor = colorDecorator.changeColor(snakeLength);
+            snakeImage.setColor(snakeColor);
+            snakeImage.fill();
+            setImage(snakeImage);
+        } 
         
         if(isAtEdge()){
             Greenfoot.playSound("Hiss.mp3");

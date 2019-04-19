@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
     private SpeedDecorator sd;
+    private ColorDecorator cd;
     private Snake snake;
     /**
      * Constructor for objects of class MyWorld.
@@ -19,8 +20,10 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         sd = new SpeedDecorator();
+        cd = new ColorDecorator();
         snake = new Snake();
-        snake.wrapDecorator(sd);
+        snake.wrapSpeedDecorator(sd);
+        snake.wrapColorDecorator(cd);
         prepare();
     }
 
