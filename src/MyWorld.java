@@ -28,6 +28,7 @@ public class MyWorld extends World
     {
       
        
+      
         
         
         Snake snake=new Snake();
@@ -47,9 +48,10 @@ public class MyWorld extends World
         
         addObject(snake, 90, 90);
         addObject(food,527,125);
-        addObject(new FoodBoard(),20,20);
-        addObject(new PowerUpBoard(),600-20,20);
-        addObject(new ScoreBoard(),600/2,20);
+        
+        addObject(foodboard,20,20);
+        addObject(powerupboard,600-20,20);
+        addObject(scoreboard,600/2,20);
       
         
         

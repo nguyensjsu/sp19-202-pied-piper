@@ -35,9 +35,13 @@ public class FoodBoard extends Board
      ArrayList list=number_image.getmyImage();
      GreenfootImage units=(GreenfootImage) list.get(0);
      GreenfootImage digits=(GreenfootImage)list.get(1);
+     
+     this.getWorld().getBackground().drawImage(units, 20, 20);
+     this.getWorld().getBackground().drawImage(digits, 30, 20);
+    
      GreenfootImage foodboardimage=this.getImage();
-     foodboardimage.drawImage(units,  0,  20);
-     foodboardimage.drawImage(digits, 10,  20);
+    
+   
 
     }
     public int getCount(){

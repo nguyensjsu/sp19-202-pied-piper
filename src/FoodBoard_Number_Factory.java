@@ -15,13 +15,12 @@ public class FoodBoard_Number_Factory implements Factory
   
     public Number_Image makeImage(int count){
         int units=count%10;
-        int digits=count%100;
+        int digits=count/10%10;
       //for (int i=0;i<9;i++){
         //   images[i]=new GreenfootImage("number_"+i+".png");
       //}
             images[0]=new GreenfootImage("number_0.png");
             images[1]=new GreenfootImage("number_1.png");
-            System.out.println(images[1]);
             images[2]=new GreenfootImage("number_2.png");
             images[3]=new GreenfootImage("number_3.png");
             images[4]=new GreenfootImage("number_4.png");
