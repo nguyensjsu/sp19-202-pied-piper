@@ -14,7 +14,7 @@ public class Number_Image extends Actor implements Product
      * Act - do whatever the Number_Image wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private ArrayList list;
+    private ArrayList list=new ArrayList<Object>();
     public void act() 
     {
         // Add your action code here.
@@ -28,5 +28,6 @@ public class Number_Image extends Actor implements Product
         return list;
     }
     public void setList(ArrayList list){this.list=list;}
+    public Number_Image(){}
 
 }

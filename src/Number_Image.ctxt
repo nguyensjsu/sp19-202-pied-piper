@@ -9,4 +9,6 @@ comment3.params=
 comment3.target=java.util.ArrayList\ getmyImage()
 comment4.params=list
 comment4.target=void\ setList(java.util.ArrayList)
-numComments=5
+comment5.params=
+comment5.target=Number_Image()
+numComments=6
