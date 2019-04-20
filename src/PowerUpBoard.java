@@ -12,12 +12,14 @@ public class PowerUpBoard extends Board
      * Act - do whatever the PowerUpBoard wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public int count=0;
     public void act() 
     {
-        // Add your action code here.
+       
     }
     public void update(PowerUp powerUp){
     powerUp.count=powerUp.count+1;
+    
     }
     
 }

@@ -21,14 +21,8 @@ public class ScoreBoard extends Board
     }
 
     @Override
-    public void update(Item item) {
-           if (item instanceof Food){
-               foodcount+=1;
-               score=score+powerupcount*2;
-           }
-           else {
-               powerupcount+=1;
-           }
+    public void update() {
+         
 
     }
     public int getscore(){

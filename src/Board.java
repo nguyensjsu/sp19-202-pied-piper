@@ -14,12 +14,14 @@ public class Board extends Actor implements Observer
      */
     protected int boardlength=0;
     protected int boardwidth=0;
-   protected int score=0;
+    
+    
     public void act() 
     {
         // Add your action code here.
+        //number.setNumber(0);
     }
-    public void show(){}
+    public void show(int count){}
     public void update(){}
 
     public int getBoardlength() {
@@ -30,9 +32,7 @@ public class Board extends Actor implements Observer
         return boardwidth;
     }
 
-    public int getScore() {
-        return score;
-    }
+ 
 
     public void setBoardlength(int boardlength) {
         this.boardlength = boardlength;
@@ -42,7 +42,6 @@ public class Board extends Actor implements Observer
         this.boardwidth = boardwidth;
     }
 
-    public void setScore(int score) {
-        this.score = score;
-    }
+   
+    
 }

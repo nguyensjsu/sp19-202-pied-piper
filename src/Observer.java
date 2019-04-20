@@ -16,6 +16,6 @@ public interface Observer
      * 
      * @return   void 
      */
-    public void update(Item item);
+    public void update();
   
 }

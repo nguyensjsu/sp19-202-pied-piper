@@ -12,7 +12,7 @@ public class Item extends Actor
      * Act - do whatever the Item wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    protected int count;
+    public int count=0;
     public void act() 
     {
         if(isTouching(Snake.class)){
@@ -23,5 +23,8 @@ public class Item extends Actor
 
     public int getCount() {
         return count;
+    }
+    public void setCount(int a){
+    count=a;
     }
 }

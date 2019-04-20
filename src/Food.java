@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class Food extends Item implements Subject
 {
-    protected  int count;
+    //protected  int count;
     List<Board> list= new ArrayList <Board>();
     /**
      * Act - do whatever the Food wants to do. This method is called whenever
@@ -19,7 +19,9 @@ public class Food extends Item implements Subject
     {
         if(isTouching(Snake.class)){
             Greenfoot.playSound("Eat.mp3");
+            
             mynotify();
+            
         }  
         super.act();
     }  
@@ -28,8 +30,17 @@ public class Food extends Item implements Subject
     };
     public void remove(){};
     public void mynotify(){
-    for(int i=0;i<list.size();i++){
-        list.get(i).update(this);
-    }
+          for (int i=0;i<list.size();i++){
+              if (list.get(i) instanceof FoodBoard){
+                  FoodBoard foodBoard=(FoodBoard) list.get(i);
+                  foodBoard.update();
+              }
+              else if (list.get(i) instanceof ScoreBoard){
+                  ScoreBoard scoreBoard=(ScoreBoard) list.get(i);
+                  scoreBoard.update();
+              }
+          }
+
+     
     };
 }

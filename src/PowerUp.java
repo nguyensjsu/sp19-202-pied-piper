@@ -29,7 +29,7 @@ public class PowerUp extends Item implements Subject
     @Override
     public void mynotify() {
         for (int i=0;i<list.size();i++){
-            list.get(i).update(this);
+            list.get(i).update();
         }
     }
 

@@ -26,6 +26,10 @@ public class MyWorld extends World
      */
     private void prepare()
     {
+      
+       
+        
+        
         Snake snake=new Snake();
         PowerUpBoard powerupboard=new  PowerUpBoard();
         FoodBoard foodboard=new FoodBoard();
@@ -46,6 +50,7 @@ public class MyWorld extends World
         addObject(new FoodBoard(),20,20);
         addObject(new PowerUpBoard(),600-20,20);
         addObject(new ScoreBoard(),600/2,20);
+      
         
         
         
