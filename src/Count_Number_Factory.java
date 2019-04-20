@@ -6,7 +6,7 @@ import greenfoot.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class FoodBoard_Number_Factory implements Factory 
+public class Count_Number_Factory implements Factory 
 {
   
     Object images[]=new Object[10];

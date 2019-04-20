@@ -17,7 +17,7 @@ public class FoodBoard extends Board
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private Number_Image number_image;
-    private int count=0;
+    
     List<Board> list= new ArrayList <Board>();
     public void act() 
     {
@@ -25,29 +25,30 @@ public class FoodBoard extends Board
         
         
     }
-    public void update(){
-     setCount(count+1);
-     show(getCount());
+    public void update(Item item){
+      Food food=(Food)item;
+        
+     food.setCount(food.getCount()+1);
+    
+     show(food.getCount());
     }
     public void show(int count){
-     FoodBoard_Number_Factory number_factory=new FoodBoard_Number_Factory();
+        
+     Count_Number_Factory number_factory=new Count_Number_Factory();
      number_image=number_factory.makeImage(count);
      ArrayList list=number_image.getmyImage();
      GreenfootImage units=(GreenfootImage) list.get(0);
      GreenfootImage digits=(GreenfootImage)list.get(1);
-     
-     this.getWorld().getBackground().drawImage(units, 20, 20);
-     this.getWorld().getBackground().drawImage(digits, 30, 20);
+     getImage().clear();
+     this.getWorld().getBackground().drawImage(units,35, 0);
+     this.getWorld().getBackground().drawImage(digits, 0, 0);
     
-     GreenfootImage foodboardimage=this.getImage();
+     //GreenfootImage foodboardimage=this.getImage();
     
    
 
     }
-    public int getCount(){
-    return count;
-    }
-    public void setCount(int a){ count=a;}
+    
    
 
 }

@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class Food extends Item implements Subject
 {
-    //protected  int count;
+  
     List<Board> list= new ArrayList <Board>();
     /**
      * Act - do whatever the Food wants to do. This method is called whenever
@@ -33,11 +33,11 @@ public class Food extends Item implements Subject
           for (int i=0;i<list.size();i++){
               if (list.get(i) instanceof FoodBoard){
                   FoodBoard foodBoard=(FoodBoard) list.get(i);
-                  foodBoard.update();
+                  foodBoard.update(this);
               }
               else if (list.get(i) instanceof ScoreBoard){
                   ScoreBoard scoreBoard=(ScoreBoard) list.get(i);
-                  scoreBoard.update();
+                  scoreBoard.update(this);
               }
           }
 

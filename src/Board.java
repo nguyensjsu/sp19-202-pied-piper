@@ -22,7 +22,7 @@ public class Board extends Actor implements Observer
         //number.setNumber(0);
     }
     public void show(int count){}
-    public void update(){}
+    public void update(Item item){}
 
     public int getBoardlength() {
         return boardlength;

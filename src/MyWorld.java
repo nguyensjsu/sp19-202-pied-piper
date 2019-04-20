@@ -38,11 +38,9 @@ public class MyWorld extends World
        
         Food food = new Food();
         food.attach(foodboard);
-
         food.attach(scoreboard);
         
         PowerUp powerUp = new PowerUp();
-
         powerUp.attach(powerupboard);
         powerUp.attach(scoreboard);
         
@@ -52,11 +50,6 @@ public class MyWorld extends World
         addObject(foodboard,20,20);
         addObject(powerupboard,600-20,20);
         addObject(scoreboard,600/2,20);
-      
-        
-        
-        
-  
         addObject(powerUp,371,199);
     }
 }
