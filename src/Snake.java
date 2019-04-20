@@ -12,25 +12,21 @@ public class Snake extends Actor
      * Act - do whatever the Snake wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    //int speed = 2;
     private int snakeSpeed;
     private ISnakeDecorator snakeDecorator;
-    //private ISpeedDecorator speedDecorator;
     private int snakeLength;
     private Color snakeColor;
     private GreenfootImage snakeImage;
 
+    private int updateSpeed;
+
     public Snake(){
+        updateSpeed = 0;
     }
 
     public void wrapSnakeDecorator(ISnakeDecorator sd) {
         this.snakeDecorator = sd;
     }
-
-    // // wrap speed decorator when touches powerup
-    // public void wrapSpeedDecorator(ISpeedDecorator sd) {
-    //     this.speedDecorator = sd;
-    // }
 
     // setup snake images
     private void prepare() {
@@ -47,8 +43,11 @@ public class Snake extends Actor
     
     public void act() 
     {   
-        prepare();
-        move(snakeSpeed);
+        prepare(); 
+
+        if (updateSpeed != 0) {
+            move(updateSpeed);
+        } else move(snakeSpeed);
 
         if (Greenfoot.isKeyDown("left"))
         {
@@ -68,7 +67,7 @@ public class Snake extends Actor
         }
         
         if(isTouching(PowerUp.class)){
-            snakeSpeed = snakeDecorator.increaseSpeed(snakeSpeed);            
+            updateSpeed += snakeDecorator.increaseSpeed(snakeSpeed);          
         } 
         // add length when snake eats apple
         if (isTouching(Food.class)) {
@@ -78,6 +77,6 @@ public class Snake extends Actor
         if(isAtEdge()){
             Greenfoot.playSound("Hiss.mp3");
             Greenfoot.stop();
-        }
+        } 
     }    
 }
