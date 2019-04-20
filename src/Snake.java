@@ -53,6 +53,7 @@ public class Snake extends Actor
         if(isAtEdge()){
             Greenfoot.playSound("Hiss.mp3");
             Greenfoot.stop();
+            Greenfoot.setWorld(new LeaderBoardScreen());
         }
     }    
 }
