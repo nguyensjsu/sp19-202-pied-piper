@@ -6,8 +6,10 @@ import greenfoot.*;
  * @author Yueqiao Zhang
  * @version 04/17
  */
-public interface ISpeedDecorator
+public interface ISnakeDecorator
 {
+      Color changeColor();
+      int changeSpeed();
+      int changeLength();
       int increaseSpeed(int speed);
-      int decreaseSpeed(int speed);
 }

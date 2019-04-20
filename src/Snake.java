@@ -13,35 +13,43 @@ public class Snake extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     //int speed = 2;
-    private int speed;
-    private ISpeedDecorator speedDecorator;
-    private IColorDecorator colorDecorator;
+    private int snakeSpeed;
+    private ISnakeDecorator snakeDecorator;
+    //private ISpeedDecorator speedDecorator;
     private int snakeLength;
     private Color snakeColor;
     private GreenfootImage snakeImage;
 
     public Snake(){
-        speed = 1;
-        snakeLength = 20;
-        snakeColor = Color.GREEN;
+    }
+
+    public void wrapSnakeDecorator(ISnakeDecorator sd) {
+        this.snakeDecorator = sd;
+    }
+
+    // // wrap speed decorator when touches powerup
+    // public void wrapSpeedDecorator(ISpeedDecorator sd) {
+    //     this.speedDecorator = sd;
+    // }
+
+    // setup snake images
+    private void prepare() {
+        snakeColor = snakeDecorator.changeColor();
+        snakeLength = snakeDecorator.changeLength();
+        snakeSpeed = snakeDecorator.changeSpeed();
+
         snakeImage = new GreenfootImage(snakeLength, snakeLength);
         snakeImage.setColor(snakeColor);
         snakeImage.fill();
         setImage(snakeImage);
     }
 
-    public void wrapSpeedDecorator(ISpeedDecorator sd) {
-        this.speedDecorator = sd;
-    }
-    
-    public void wrapColorDecorator(IColorDecorator cd) {
-        this.colorDecorator = cd;
-    }
-
     
     public void act() 
-    {
-        move(speed);
+    {   
+        prepare();
+        move(snakeSpeed);
+
         if (Greenfoot.isKeyDown("left"))
         {
             setRotation(180);
@@ -60,17 +68,11 @@ public class Snake extends Actor
         }
         
         if(isTouching(PowerUp.class)){
-            //speed++;
-            speed = speedDecorator.increaseSpeed(speed);
+            snakeSpeed = snakeDecorator.increaseSpeed(snakeSpeed);            
         } 
         // add length when snake eats apple
         if (isTouching(Food.class)) {
-            snakeLength += 50;
-            snakeImage = new GreenfootImage(snakeLength, 20);
-            snakeColor = colorDecorator.changeColor(snakeLength);
-            snakeImage.setColor(snakeColor);
-            snakeImage.fill();
-            setImage(snakeImage);
+
         } 
         
         if(isAtEdge()){
