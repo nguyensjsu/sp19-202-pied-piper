@@ -30,11 +30,11 @@ public class Snake extends Actor
 
     // setup snake images
     private void prepare() {
-        snakeColor = snakeDecorator.changeColor();
-        snakeLength = snakeDecorator.changeLength();
-        snakeSpeed = snakeDecorator.changeSpeed();
+        snakeColor = snakeDecorator.defaultColor();
+        int[] defaultLength = snakeDecorator.defaultLength();
+        snakeSpeed = snakeDecorator.defaultSpeed();
 
-        snakeImage = new GreenfootImage(snakeLength, snakeLength);
+        snakeImage = new GreenfootImage(defaultLength[0], defaultLength[1]);
         snakeImage.setColor(snakeColor);
         snakeImage.fill();
         setImage(snakeImage);

@@ -10,16 +10,19 @@ public class GreenSnakeDecorator implements ISnakeDecorator
     /**
      * snake speed decorator
      */
-    public Color changeColor() {
+    public Color defaultColor() {
     	return Color.GREEN;
     }
 
-    public int changeSpeed() {
+    public int defaultSpeed() {
     	return 2;
     }
 
-    public int changeLength() {
-    	return 20;
+    public int[] defaultLength() {
+        int[] result = new int[2];
+        result[0] = 40;
+        result[1] = 20;
+        return result;
     }
 
     public int increaseSpeed(int speed) {

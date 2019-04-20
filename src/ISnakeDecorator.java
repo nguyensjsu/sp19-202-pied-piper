@@ -8,8 +8,8 @@ import greenfoot.*;
  */
 public interface ISnakeDecorator
 {
-      Color changeColor();
-      int changeSpeed();
-      int changeLength();
+      Color defaultColor();
+      int defaultSpeed();
+      int[] defaultLength();
       int increaseSpeed(int speed);
 }
