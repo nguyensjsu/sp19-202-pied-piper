@@ -1,4 +1,4 @@
-# Week 2 Scrum Report
+# Week 3 Scrum Report
 
 ## Name
 Jake(Ilsoo) Kim
