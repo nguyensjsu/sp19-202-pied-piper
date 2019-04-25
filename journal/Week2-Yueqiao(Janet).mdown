@@ -1,0 +1,23 @@
+# Week 2 Scrum Report 
+
+## Yueqiao(Janet)
+
+### Finished Last Week 
+- Task1: Contribute to team to come up with project idea 
+- Task2: Contribute to team to discuss about game mechanics
+
+### Planned Next Week 
+- Task1: Implement Decorator Design Pattern for snake color and speed
+- Task2: Work on SpeedDecorator and ColorDecorator class
+
+### Problems
+
+### Time Spend
+
+- Task1: 4 hrs
+- Task2: 4 hrs
+
+## Yueqiao(Janet)
+
+- XP Core Value: Respect
+- Our team valued each other as a valued team member. When we were discussing for what kinds of game we should do, we respect everyone's ideas and each team memeber chose one kinds of game and gave some opinions for the reason why we should build it. Finally, when everyone thought snake would be a great idea for building a game, we made a decision to do a snake game. 

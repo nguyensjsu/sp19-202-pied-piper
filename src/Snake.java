@@ -18,10 +18,10 @@ public class Snake extends Actor
     private Color snakeColor;
     private GreenfootImage snakeImage;
 
-    private int updateSpeed;
+    //private int updateSpeed;
 
     public Snake(){
-        updateSpeed = 0;
+        //updateSpeed = 0;
     }
 
     public void wrapSnakeDecorator(ISnakeDecorator sd) {
@@ -41,14 +41,32 @@ public class Snake extends Actor
     }
 
     
+//     public void act() 
+//     {   
+//         prepare(); 
+
+//         if (updateSpeed != 0) {
+//             move(updateSpeed);
+//         } else move(snakeSpeed);
+
+=======
+    public int timer = 0; // Snake moves a unit (50 px) every 50 ticks
+    public int speed = 2; // Speed multiplier for ticks
+    
+//     public Snake(){
+//         GreenfootImage snakeImage = new GreenfootImage(50,50);
+//         snakeImage.fill();
+//         setImage(snakeImage);
+//     }
+    
     public void act() 
-    {   
-        prepare(); 
-
-        if (updateSpeed != 0) {
-            move(updateSpeed);
-        } else move(snakeSpeed);
-
+    { 
+        prepare();
+        timer += speed; // Timer increments based on speed value
+        if (timer >= 50){ 
+            move(50); // When timer hits 50, move 1 unit and reset timer
+            timer = 0;
+        }
         if (Greenfoot.isKeyDown("left"))
         {
             setRotation(180);
@@ -67,16 +85,19 @@ public class Snake extends Actor
         }
         
         if(isTouching(PowerUp.class)){
-            updateSpeed += snakeDecorator.increaseSpeed(snakeSpeed);          
-        } 
-        // add length when snake eats apple
-        if (isTouching(Food.class)) {
+//             updateSpeed += snakeDecorator.increaseSpeed(snakeSpeed);          
+//         } 
+//         // add length when snake eats apple
+//         if (isTouching(Food.class)) {
 
-        } 
+//         } 
+            speed++;
+        }  
         
         if(isAtEdge()){
             Greenfoot.playSound("Hiss.mp3");
             Greenfoot.stop();
-        } 
+            Greenfoot.setWorld(new LeaderBoardScreen());
+        }
     }    
 }

@@ -1,18 +1,15 @@
-
-*Please do the following:*
-
-1. Edit this readme file first
-
-2. Read './document/README.md' for instructions about team repo submissions.
-
-
 # Team Project Repo 
 
 ## Team Name
+Pied Piper
 
 ## Team Members
 
-* [Name](url_to_your_github_repo)
+* [Alan](https://github.com/athsueh)
+* [Haoran](https://github.com/HaoRanChen123)
+* [Jake (Ilsoo Kim)](https://github.com/jake-ilsoo-kim)
+* [Janet](https://github.com/treetree0211)
+* [Prachi](https://github.com/)
 
 ## Project Name
 
