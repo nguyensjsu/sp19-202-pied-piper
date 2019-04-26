@@ -7,7 +7,7 @@
 - Task2: Implemented snake Color and Speed Decorator classes
 
 ### Planned Next Week 
-- Task1: Added Main Play Screen color and speed power up selection
+- Task1: Added Main Play Screen color and speed power up and bomb selection
 - Task2: Design for Entry Game Screen and Snake Selection
 
 ### Problems
