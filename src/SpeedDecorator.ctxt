@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=SpeedDecorator
+comment0.text=\n\ Snake\ Speed\ decorator\ \n\ \n\ @author\ Yueqiao\ Zhang\ \n\ @version\ 4/18\n
+comment1.params=speed
+comment1.target=int\ increaseSpeed(int)
+comment1.text=\n\ snake\ speed\ decorator\n
+comment2.params=speed
+comment2.target=int\ decreaseSpeed(int)
+numComments=3

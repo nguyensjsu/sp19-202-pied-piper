@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=ISnakeDecorator
-comment0.text=\r\n\ interface\ class\ for\ snake\ speed\ change\ decorator\r\n\ \r\n\ @author\ Yueqiao\ Zhang\r\n\ @version\ 04/17\r\n
+comment0.text=\n\ interface\ class\ for\ snake\ speed\ change\ decorator\n\ \n\ @author\ Yueqiao\ Zhang\n\ @version\ 04/17\n
 comment1.params=
 comment1.target=greenfoot.Color\ defaultColor()
 comment2.params=

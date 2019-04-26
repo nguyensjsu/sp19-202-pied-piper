@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=IColorDecorator
+comment0.text=\n\ interface\ class\ for\ snake\ speed\ change\ decorator\n\ \n\ @author\ Yueqiao\ Zhang\n\ @version\ 04/19\n
+comment1.params=length
+comment1.target=greenfoot.Color\ changeColor(int)
+numComments=2

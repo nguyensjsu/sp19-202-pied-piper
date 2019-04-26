@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ColorDecorator
+comment0.text=\n\ Snake\ Speed\ decorator\ \n\ \n\ @author\ Yueqiao\ Zhang\ \n\ @version\ 4/19\n
+comment1.params=length
+comment1.target=greenfoot.Color\ changeColor(int)
+comment1.text=\n\ snake\ color\ decorator\n
+numComments=2
