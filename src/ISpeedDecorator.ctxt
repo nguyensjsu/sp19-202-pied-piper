@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.target=ISpeedDecorator
-comment0.text=\n\ interface\ class\ for\ snake\ speed\ change\ decorator\n\ \n\ @author\ Yueqiao\ Zhang\n\ @version\ 04/17\n
-comment1.params=speed
-comment1.target=int\ increaseSpeed(int)
-comment2.params=speed
-comment2.target=int\ decreaseSpeed(int)
-numComments=3
