@@ -1,9 +1,9 @@
 #BlueJ class context
-comment0.target=LeaderBoardLeaf
-comment1.params=d\ p
-comment1.target=LeaderBoardLeaf(java.lang.String,\ java.lang.Double)
+comment0.target=LeaderBoardComposite
+comment1.params=
+comment1.target=LeaderBoardComposite()
 comment2.params=
-comment2.target=void\ printDescription()
+comment2.target=void\ printOnScreen()
 comment3.params=c
 comment3.target=void\ addChild(LeaderBoardComponent)
 comment4.params=c
