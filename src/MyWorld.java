@@ -30,7 +30,7 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-        addObject(new Snake(), 125, 125);
+        //addObject(new Snake(), 125, 125);
         Food food = new Food();
         addObject(food,527,125);
         PowerUp powerUp = new PowerUp();
