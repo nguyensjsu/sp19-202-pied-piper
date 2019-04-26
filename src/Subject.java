@@ -14,6 +14,7 @@ public interface Subject
      * @param  y   a sample parameter for a method
      * @return    void 
      */
+	int a;
     public void attach(Board board);
     public void remove();
     public void mynotify();
