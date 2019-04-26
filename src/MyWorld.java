@@ -15,7 +15,12 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+
+       
+        super(1200, 700, 1); 
+        GreenfootImage tile = new GreenfootImage(50,50);
+        tile.drawRect(0,0,50,50);
+        setBackground(tile);
         prepare();
     }
 
@@ -25,9 +30,10 @@ public class MyWorld extends World
      */
     private void prepare()
     {
+        addObject(new Snake(), 125, 125);
         Food food = new Food();
         addObject(food,527,125);
         PowerUp powerUp = new PowerUp();
-        addObject(powerUp,100,199);
+        addObject(powerUp,371,199);
     }
 }
