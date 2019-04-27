@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=LeaderBoardScreen
-comment0.text=\n\ Write\ a\ description\ of\ class\ BackGround\ here.\n\ \n\ @author\ Jake\n\ @version\ 1.0\ /\ Apr\ 19\ 2019\n
-comment1.params=
-comment1.target=LeaderBoardScreen()
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ BackGround.\n\ \n
-comment2.params=
-comment2.target=void\ prepare()
-numComments=3
