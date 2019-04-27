@@ -15,8 +15,12 @@ public class Item extends Actor
     public void act() 
     {
         if(isTouching(Snake.class)){
-            setLocation(Greenfoot.getRandomNumber(600),
-            Greenfoot.getRandomNumber(400));
-        }
-    }    
+            setLocation(Greenfoot.getRandomNumber(coordinate(9)),
+            Greenfoot.getRandomNumber(coordinate(4)));
+        }        
+    }
+    public int coordinate(int i){
+        i = (i+2)*100;
+        return i;
+    }
 }
