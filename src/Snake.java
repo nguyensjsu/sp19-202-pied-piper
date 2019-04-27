@@ -17,11 +17,10 @@ public class Snake extends Actor
     private int snakeLength;
     private Color snakeColor;
     private GreenfootImage snakeImage;
+    public int timer = 0; // Snake moves a unit (50 px) every 50 ticks
 
     private int updateSpeed;
     
-    public int timer = 0;
-
     public Snake(){
         updateSpeed = 0;        
     }
@@ -50,7 +49,7 @@ public class Snake extends Actor
 //         if (updateSpeed != 0) {
 //             move(updateSpeed);
 //         } else move(snakeSpeed);
-    //public int timer = 0; // Snake moves a unit (50 px) every 50 ticks
+    
     //public int speed = 2; // Speed multiplier for ticks
     
 //     public Snake(){
@@ -76,6 +75,7 @@ public class Snake extends Actor
          //    move(updateSpeed);
          //} else move(snakeSpeed);
 
+
         if (Greenfoot.isKeyDown("left"))
         {
             setRotation(180);
@@ -94,7 +94,13 @@ public class Snake extends Actor
         }
         
         if(isTouching(PowerUp.class)){
-             updateSpeed += snakeDecorator.increaseSpeed(snakeSpeed); 
+             /* 
+                Increase speed when touches power up
+             */
+             if (updateSpeed != 0) {
+                updateSpeed = snakeDecorator.increaseSpeed(snakeSpeed);
+             } else updateSpeed = snakeDecorator.increaseSpeed(updateSpeed);
+    
         }         
 //         } 
 //         // add length when snake eats apple
