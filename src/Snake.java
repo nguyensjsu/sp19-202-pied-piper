@@ -40,7 +40,6 @@ public class Snake extends Actor
         snakeImage.fill();
         setImage(snakeImage);
     }
-
     
 //     public void act() 
 //     {   
@@ -69,6 +68,7 @@ public class Snake extends Actor
          // Timer increments based on speed value
         if (timer >= 50){ 
             move(50); // When timer hits 50, move 1 unit and reset timer
+            getWorld().addObject(new Tail(), getX(), getY());
             timer = 0;
         }
 

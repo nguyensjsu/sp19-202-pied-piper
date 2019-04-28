@@ -20,8 +20,8 @@ public class RedSnakeDecorator implements ISnakeDecorator
 
     public int[] defaultLength() {
         int[] result = new int[2];
-        result[0] = 20;
-        result[1] = 20;
+        result[0] = 50;
+        result[1] = 50;
     	return result;
     }
 
