@@ -18,6 +18,7 @@ public class PowerUp extends Item implements Subject
     {
         if(isTouching(Snake.class)){
             Greenfoot.playSound("PowerUp.mp3");
+            mynotify();
         }  
         super.act();
     }
