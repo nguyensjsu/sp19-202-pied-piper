@@ -47,6 +47,7 @@ public class MyWorld extends World
         addObject(foodboard,20,20);
         addObject(powerupboard,1200-20,20);
         addObject(scoreboard,1200/2,20);
+        addObject(snake,300,200);
 
     }
 }
