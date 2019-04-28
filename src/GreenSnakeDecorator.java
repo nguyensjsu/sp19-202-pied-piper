@@ -20,7 +20,7 @@ public class GreenSnakeDecorator implements ISnakeDecorator
 
     public int[] defaultLength() {
         int[] result = new int[2];
-        result[0] = 50;
+        result[0] = 100;
         result[1] = 50;
         return result;
     }

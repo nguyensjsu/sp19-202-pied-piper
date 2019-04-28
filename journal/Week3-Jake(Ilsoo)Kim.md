@@ -1,8 +1,8 @@
-# Week 2 Scrum Report
+# Week 3 Scrum Report
 
 ## Name
 Jake(Ilsoo) Kim
-
+ 
 ### Finished Last Week 
 - Task1: Implement pattern ( Composit Pattern)
 - Task2: Work on Leaderboard.Class

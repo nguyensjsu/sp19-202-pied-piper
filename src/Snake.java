@@ -20,9 +20,9 @@ public class Snake extends Actor
     public int timer = 0; // Snake moves a unit (50 px) every 50 ticks
 
     private int updateSpeed;
-
+    
     public Snake(){
-        updateSpeed = 0;
+        updateSpeed = 0;        
     }
 
     public void wrapSnakeDecorator(ISnakeDecorator sd) {
@@ -60,6 +60,12 @@ public class Snake extends Actor
     public void act() 
     { 
         prepare();
+//          timer += snakeSpeed; // Timer increments based on speed value
+         
+//          if (timer >= 50){ 
+//              move(50); // When timer hits 50, move 1 unit and reset timer
+//              timer = 0;
+//          }
 
         if (updateSpeed != 0) {
             timer += updateSpeed;
@@ -68,6 +74,9 @@ public class Snake extends Actor
          // Timer increments based on speed value
         if (timer >= 50){ 
             move(50); // When timer hits 50, move 1 unit and reset timer
+            /**
+             Add snake tail object in order the snake can grow
+            **/
             getWorld().addObject(new Tail(), getX(), getY());
             timer = 0;
         }
