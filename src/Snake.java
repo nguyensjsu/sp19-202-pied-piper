@@ -57,6 +57,8 @@ public class Snake extends Actor
         
     }
 
+    private int growingFactor;
+
     public void act() 
     { 
         /** Update speed when touches power up class
@@ -67,7 +69,11 @@ public class Snake extends Actor
 
          // Timer increments based on speed value
         if (timer == 50){ 
-            getWorld().addObject(new Tail(snakeColor, snakeLife + 10 * foodEaten), getX(), getY());
+            if (updateSpeed != 0) {
+                growingFactor = updateSpeed * foodEaten;
+            } else growingFactor = snakeSpeed * foodEaten;
+
+            getWorld().addObject(new Tail(snakeColor, snakeLife + growingFactor), getX(), getY());
             move(50); // When timer hits 50, move 1 unit and reset timer
             timer = 0;
         }

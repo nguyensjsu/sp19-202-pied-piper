@@ -36,8 +36,8 @@ public class MyWorld extends World
         FoodBoard foodboard=new FoodBoard();
         ScoreBoard scoreboard=new ScoreBoard();
         Food food = new Food();
-        // food.attach(foodboard);
-        // food.attach(scoreboard);
+        food.attach(foodboard);
+        food.attach(scoreboard);
         addObject(food,525,125);
         PowerUp powerUp = new PowerUp();
         powerUp.attach(powerupboard);
