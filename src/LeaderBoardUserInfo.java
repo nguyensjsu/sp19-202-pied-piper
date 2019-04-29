@@ -15,8 +15,6 @@ public class LeaderBoardUserInfo extends LeaderBoardComponent
      */
     private ArrayList<LeaderBoardComponent> components = new ArrayList<LeaderBoardComponent>()  ;
     private String description ;
-    
-    
     public void act() 
     {
         // Add your action code here.

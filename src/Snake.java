@@ -40,6 +40,7 @@ public class Snake extends Actor
         snakeImage.fill();
         setImage(snakeImage);
     }
+
     
 //     public void act() 
 //     {   
@@ -60,26 +61,20 @@ public class Snake extends Actor
     public void act() 
     { 
         prepare();
-//          timer += snakeSpeed; // Timer increments based on speed value
+        
+        //if (updateSpeed != 0) {
+         //    move(updateSpeed);
+        // } else move(snakeSpeed);
+         timer += snakeSpeed; // Timer increments based on speed value
          
-//          if (timer >= 50){ 
-//              move(50); // When timer hits 50, move 1 unit and reset timer
-//              timer = 0;
-//          }
+         if (timer >= 50){ 
+             move(50); // When timer hits 50, move 1 unit and reset timer
+             timer = 0;
+         }
+         //if (updateSpeed != 0) {
+         //    move(updateSpeed);
+         //} else move(snakeSpeed);
 
-        if (updateSpeed != 0) {
-            timer += updateSpeed;
-        } else timer += snakeSpeed;
-
-         // Timer increments based on speed value
-        if (timer >= 50){ 
-            move(50); // When timer hits 50, move 1 unit and reset timer
-            /**
-             Add snake tail object in order the snake can grow
-            **/
-            getWorld().addObject(new Tail(), getX(), getY());
-            timer = 0;
-        }
 
         if (Greenfoot.isKeyDown("left"))
         {

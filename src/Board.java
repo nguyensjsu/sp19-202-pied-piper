@@ -14,12 +14,13 @@ public class Board extends Actor implements Observer
      */
     protected int boardlength=0;
     protected int boardwidth=0;
+    protected World world;
+    protected NumberSpace unitsspace;
+    protected NumberSpace digitsspace;
+   
     
+    public  Board(){
     
-    public void act() 
-    {
-        // Add your action code here.
-        //number.setNumber(0);
     }
     public void show(int count){}
     public void update(Item item){}
