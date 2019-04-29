@@ -23,6 +23,6 @@ public class RedSnakeDecorator implements ISnakeDecorator
     }
 
     public int increaseSpeed(int speed) {
-        return speed + 2;
+        return speed - 1;
     }
 }
