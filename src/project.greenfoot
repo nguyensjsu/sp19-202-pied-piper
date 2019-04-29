@@ -422,6 +422,6 @@ target9.x=0
 target9.y=0
 version=3.0.0
 width=1556
-world.lastInstantiated=MyWorld
+world.lastInstantiated=SnakeSelectionWorld
 xPosition=0
 yPosition=0

@@ -20,61 +20,63 @@ public class Snake extends Actor
     public int timer = 0; // Snake moves a unit (50 px) every 50 ticks
 
     private int updateSpeed;
+    private int snakeLife;
     
+    private int foodEaten;
+
     public Snake(){
-        updateSpeed = 0;        
+        updateSpeed = 0;
+        foodEaten = 0;    
     }
 
     public void wrapSnakeDecorator(ISnakeDecorator sd) {
         this.snakeDecorator = sd;
     }
-
+    //private Tail start;
     // setup snake images
-    private void prepare() {
+    public void prepare() {
         snakeColor = snakeDecorator.defaultColor();
-        int[] defaultLength = snakeDecorator.defaultLength();
         snakeSpeed = snakeDecorator.defaultSpeed();
-
-        snakeImage = new GreenfootImage(defaultLength[0], defaultLength[1]);
+        snakeLife = snakeDecorator.defaultLifeSpan();
+        snakeImage = new GreenfootImage(50, 50);
         snakeImage.setColor(snakeColor);
         snakeImage.fill();
         setImage(snakeImage);
+        addBeginningTail(snakeLife);
+
     }
 
-    
-//     public void act() 
-//     {   
-//         prepare(); 
+    public void addBeginningTail(int life) {
+        if (life == 50) {
+            //start = new Tail(snakeColor, snakeLife);
+            getWorld().addObject(new Tail(snakeColor, life), getX()-50, getY());
+        } else if (life == 150) {
+            getWorld().addObject(new Tail(snakeColor, life), getX()-50, getY());
+            getWorld().addObject(new Tail(snakeColor, life), getX()-100, getY());
+        }
+        
+    }
 
-//         if (updateSpeed != 0) {
-//             move(updateSpeed);
-//         } else move(snakeSpeed);
-    
-    //public int speed = 2; // Speed multiplier for ticks
-    
-//     public Snake(){
-//         GreenfootImage snakeImage = new GreenfootImage(50,50);
-//         snakeImage.fill();
-//         setImage(snakeImage);
-//     }
-    
+    private int growingFactor;
+
     public void act() 
     { 
-        prepare();
-        
-        //if (updateSpeed != 0) {
-         //    move(updateSpeed);
-        // } else move(snakeSpeed);
-         timer += snakeSpeed; // Timer increments based on speed value
-         
-         if (timer >= 50){ 
-             move(50); // When timer hits 50, move 1 unit and reset timer
-             timer = 0;
-         }
-         //if (updateSpeed != 0) {
-         //    move(updateSpeed);
-         //} else move(snakeSpeed);
+        /** Update speed when touches power up class
+        **/
+        if (updateSpeed != 0) {
+            timer += updateSpeed;
+        } else timer += snakeSpeed;
 
+         // Timer increments based on speed value
+        if (timer == 50){ 
+            if (updateSpeed != 0) {
+                growingFactor = updateSpeed * foodEaten;
+            } else growingFactor = snakeSpeed * foodEaten;
+
+            getWorld().addObject(new Tail(snakeColor, snakeLife + growingFactor), getX(), getY());
+            move(50); // When timer hits 50, move 1 unit and reset timer
+            timer = 0;
+        }
 
         if (Greenfoot.isKeyDown("left"))
         {
@@ -102,12 +104,11 @@ public class Snake extends Actor
              } else updateSpeed = snakeDecorator.increaseSpeed(updateSpeed);
     
         }         
-//         } 
-//         // add length when snake eats apple
-//         if (isTouching(Food.class)) {
 
-//         } 
-            //speed++;
+        if (isTouching(Food.class)) {
+            foodEaten++;
+        } 
+            
           
         
         if(isAtEdge()){
@@ -115,5 +116,5 @@ public class Snake extends Actor
             Greenfoot.stop();
             Greenfoot.setWorld(new LeaderBoardScreen());
         }
-    }    
+    } 
 }

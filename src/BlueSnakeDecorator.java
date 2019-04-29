@@ -5,7 +5,7 @@ import greenfoot.*;
  * @author Yueqiao Zhang 
  * @version 4/18
  */
-public class BlueSnakeDecorator implements ISnakeDecorator
+public class BlueSnakeDecorator implements ISnakeDecorator 
 {
     /**
      * snake speed decorator
@@ -18,11 +18,8 @@ public class BlueSnakeDecorator implements ISnakeDecorator
     	return 1;
     }
 
-    public int[] defaultLength() {
-        int[] result = new int[2];
-        result[0] = 200;
-        result[1] = 50;
-        return result;
+    public int defaultLifeSpan() {
+        return 150;
     }
     
     public int increaseSpeed(int speed) {

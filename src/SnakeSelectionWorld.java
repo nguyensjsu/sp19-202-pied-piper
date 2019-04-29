@@ -54,15 +54,21 @@ public class SnakeSelectionWorld extends World
         // add snake to myworld and jump to myworld
         if(Greenfoot.mouseClicked(gsnake)) {
             snake.wrapSnakeDecorator(gsd);
+            
             world.addObject(snake, 150, 125);
+            snake.prepare();
             Greenfoot.setWorld(world);
         } else if (Greenfoot.mouseClicked(bsnake)) {
             snake.wrapSnakeDecorator(bsd);
+            
             world.addObject(snake, 150, 125);
+            snake.prepare();
             Greenfoot.setWorld(world);
         } else if (Greenfoot.mouseClicked(rsnake)) {
             snake.wrapSnakeDecorator(rsd);
+            
             world.addObject(snake, 175, 125);
+            snake.prepare();
             Greenfoot.setWorld(world);
         } 
     }

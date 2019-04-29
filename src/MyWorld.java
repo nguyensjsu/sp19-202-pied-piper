@@ -32,12 +32,10 @@ public class MyWorld extends World
     {
         //addObject(new Snake(), 125, 125);
         this.setPaintOrder(NumberSpace.class,Board.class);
-        Snake snake=new Snake();
+        //Snake snake=new Snake();
         PowerUpBoard powerupboard=new  PowerUpBoard();
         FoodBoard foodboard=new FoodBoard();
         ScoreBoard scoreboard=new ScoreBoard();
-      
-
         Food food = new Food();
         food.attach(foodboard);
         food.attach(scoreboard);

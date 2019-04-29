@@ -15,14 +15,11 @@ public class RedSnakeDecorator implements ISnakeDecorator
     }
 
     public int defaultSpeed() {
-    	return 3;
+    	return 5;
     }
 
-    public int[] defaultLength() {
-        int[] result = new int[2];
-        result[0] = 50;
-        result[1] = 50;
-    	return result;
+    public int defaultLifeSpan() {
+       return 1;
     }
 
     public int increaseSpeed(int speed) {

@@ -7,7 +7,7 @@ import java.util.List;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PowerUp extends Item implements Subject
+public class PowerUp extends Item 
 {
     /**
      * Act - do whatever the PowerUp wants to do. This method is called whenever
@@ -25,7 +25,7 @@ public class PowerUp extends Item implements Subject
     public void attach(Board board){list.add(board);};
     public void remove(){}
 
-    @Override
+    //@Override
     public void mynotify() {
 
         for (int i=0;i<list.size();i++){
