@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=BlueSnakeDecorator
+comment0.text=\r\n\ Snake\ Speed\ decorator\ \r\n\ \r\n\ @author\ Yueqiao\ Zhang\ \r\n\ @version\ 4/18\r\n
+comment1.params=
+comment1.target=greenfoot.Color\ defaultColor()
+comment1.text=\r\n\ snake\ speed\ decorator\r\n
+comment2.params=
+comment2.target=int\ defaultSpeed()
+comment3.params=
+comment3.target=int[]\ defaultLength()
+comment4.params=speed
+comment4.target=int\ increaseSpeed(int)
+numComments=5

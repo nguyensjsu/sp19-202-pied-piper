@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Count_Number_Factory
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ FoodBoard_Number_Factory\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=count
+comment1.target=Number_Image\ makeImage(int)
+numComments=2

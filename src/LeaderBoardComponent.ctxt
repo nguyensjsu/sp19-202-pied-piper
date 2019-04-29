@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=LeaderBoardComponent
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Component\ here.\r\n\ \r\n\ @author\ Jake\r\n\ @version\ 1.0\ /\ Apr\ 19\ 2019\r\n
+comment1.params=
+comment1.target=void\ printOnScreen()
+comment2.params=c
+comment2.target=void\ addChild(LeaderBoardComponent)
+comment3.params=c
+comment3.target=void\ removeChild(LeaderBoardComponent)
+comment4.params=i
+comment4.target=LeaderBoardComponent\ getChild(int)
+numComments=5
