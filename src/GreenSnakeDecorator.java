@@ -18,11 +18,8 @@ public class GreenSnakeDecorator implements ISnakeDecorator
     	return 2;
     }
 
-    public int[] defaultLength() {
-        int[] result = new int[2];
-        result[0] = 100;
-        result[1] = 50;
-        return result;
+    public int defaultLifeSpan() {
+        return 50;
     }
 
     public int increaseSpeed(int speed) {
