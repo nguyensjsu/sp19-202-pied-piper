@@ -31,6 +31,7 @@ public class MyWorld extends World
     private void prepare()
     {
         //addObject(new Snake(), 125, 125);
+        this.setPaintOrder(NumberSpace.class,Board.class);
         Snake snake=new Snake();
         PowerUpBoard powerupboard=new  PowerUpBoard();
         FoodBoard foodboard=new FoodBoard();
@@ -46,8 +47,8 @@ public class MyWorld extends World
         powerUp.attach(scoreboard);
         addObject(powerUp,375,175);
         addObject(foodboard,0,0);
-        addObject(powerupboard,1080,0);
-        addObject(scoreboard,560,0);
+        addObject(powerupboard,1200,0);
+        addObject(scoreboard,600,0);
        
 
     }

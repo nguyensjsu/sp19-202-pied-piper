@@ -1,27 +1,31 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
-
-/**
- * Write a description of class FoodBoard here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class FoodBoard extends Board
-{
+    import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+    
+    import java.awt.*;
+    import java.util.ArrayList;
+    import java.util.List;
+    
     /**
-     * Act - do whatever the FoodBoard wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Write a description of class FoodBoard here.
+     * 
+     * @author (your name) 
+     * @version (a version number or a date)
      */
-    private Number_Image number_image;
-    private World world;
-    public FoodBoard(){
-      GreenfootImage bg = new GreenfootImage("bg.jpg");
-        bg.scale(400,300);
+    public class FoodBoard extends Board
+    {
+        /**
+         * Act - do whatever the FoodBoard wants to do. This method is called whenever
+         * the 'Act' or 'Run' button gets pressed in the environment.
+         */
+        private Number_Image number_image;
+        
+        
+        
+        public FoodBoard(){
+        GreenfootImage bg = new GreenfootImage("bg.jpg");
+        bg.scale(200,200);
         setImage(bg);
+      
+       
     }
     
     List<Board> list= new ArrayList <Board>();
@@ -45,14 +49,31 @@ public class FoodBoard extends Board
      ArrayList list=number_image.getmyImage();
      GreenfootImage units=(GreenfootImage) list.get(0);
      GreenfootImage digits=(GreenfootImage)list.get(1);
-   
+     
+     world=this.getWorld();
+     
+     unitsspace=new NumberSpace(units);
+     unitsspace.set_the_Image();
+     digitsspace=new NumberSpace(digits);
+     digitsspace.set_the_Image();
+     
+     
+    
+     //world.addObject(digitsspace,50,50);
+     world.addObject(unitsspace,75,50);
+     world.addObject(digitsspace,25,50);
+     //this.getWorld();
+     //this.getWorld().setPaintOrder(Board.class,UnitsSpace.class);
+    
+     
+    
      
      
     
      
      
-     this.getWorld().getBackground().drawImage(units, 60, 0);
-     this.getWorld().getBackground().drawImage(digits, 0, 0);
+     //this.getWorld().getBackground().drawImage(units, 60, 0);
+     //this.getWorld().getBackground().drawImage(digits, 0, 0);
     
      //GreenfootImage foodboardimage=this.getImage();
     

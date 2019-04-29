@@ -18,6 +18,11 @@ public class ScoreBoard extends Board
     private Number_Image number_image;
     int powerupcount=0;
     int score=0;
+    public ScoreBoard(){
+        GreenfootImage bg = new GreenfootImage("bg.jpg");
+        bg.scale(100,200);
+        setImage(bg);
+    }
     public void act() 
     {
         // Add your action code here.
@@ -45,9 +50,22 @@ public class ScoreBoard extends Board
      ArrayList list=number_image.getmyImage();
      GreenfootImage units=(GreenfootImage) list.get(0);
      GreenfootImage digits=(GreenfootImage)list.get(1);
-     //this.getImage().clear();
-     this.getWorld().getBackground().drawImage(units,1200/2+25, 0);
-     this.getWorld().getBackground().drawImage(digits, 1200/2-40, 0);
+     
+     
+     
+     world=this.getWorld();
+     
+     unitsspace=new NumberSpace(units);
+     unitsspace.set_the_Image();
+     digitsspace=new NumberSpace(digits);
+     digitsspace.set_the_Image();
+     
+     
+    
+    
+     world.addObject(unitsspace,625,50);
+     world.addObject(digitsspace,575,50);
+    
     }
 
 }
