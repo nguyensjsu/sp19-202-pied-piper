@@ -19,10 +19,10 @@ public class GreenSnakeDecorator implements ISnakeDecorator
     }
 
     public int defaultLifeSpan() {
-        return 50;
+        return 1;
     }
 
     public int increaseSpeed(int speed) {
-        return speed + 2;
+        return speed + 1;
     }
 }
