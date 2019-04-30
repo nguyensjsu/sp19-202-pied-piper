@@ -1,6 +1,6 @@
 import greenfoot.*;  
 /**
- * Snake Speed decorator 
+ * Snake Tail
  * 
  * @author Yueqiao Zhang 
  * @version 4/19

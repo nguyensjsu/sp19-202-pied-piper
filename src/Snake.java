@@ -7,55 +7,80 @@
      * @version (a version number or a date)
      */
     public class Snake extends Actor
-    {
+    {   
         /**
-         * Act - do whatever the Snake wants to do. This method is called whenever
-         * the 'Act' or 'Run' button gets pressed in the environment.
+         * Add snake attribute, 
          */
         private int snakeSpeed;
         private ISnakeDecorator snakeDecorator;
-        private int snakeLength;
         private Color snakeColor;
+        private int snakeLife; 
         private GreenfootImage snakeImage;
+
+        /**
+        **  Set up animation attribute
+        **/
         public int timer = 0; // Snake moves a unit (50 px) every 50 ticks
-    
-        private int updateSpeed;
-        private int snakeLife;
-        
-        private int foodEaten;
-          
-        public Snake(){
-            updateSpeed = 0;
-            foodEaten = 0;    
-        }
-    
-        public void wrapSnakeDecorator(ISnakeDecorator sd) {
-            this.snakeDecorator = sd;
-        }
-        //private Tail start;
-        // setup snake images
-        public void prepare() {
-            snakeColor = snakeDecorator.defaultColor();
-            snakeSpeed = snakeDecorator.defaultSpeed();
-            snakeLife = snakeDecorator.defaultLifeSpan();
-            snakeImage = new GreenfootImage(50, 50);
-            snakeImage.setColor(snakeColor);
-            snakeImage.fill();
-            setImage(snakeImage);   
-                  
+        private int updateSpeed = 0;     
+        private int foodEaten = 0;
+
+        /** Added Builder Design Pattern for constructing snake details
+        **/
+        public static class Builder {
+            private int snakeSpeed;
+            private int snakeLife;
+            private ISnakeDecorator snakeDecorator;
+            private Color snakeColor;
+            private GreenfootImage snakeImage;
+
+            public Builder(ISnakeDecorator snakeDecorator) {
+                this.snakeDecorator = snakeDecorator;
+            }
+            public Builder snakeColor(){
+                this.snakeColor = snakeDecorator.defaultColor();
+                return this;  //By returning the builder each time, we can create a fluent interface.
+            }
+            public Builder snakeSpeed(){
+                this.snakeSpeed = snakeDecorator.defaultSpeed();
+                return this;  //By returning the builder each time, we can create a fluent interface.
+            }
+            public Builder snakeLife(){
+                this.snakeLife = snakeDecorator.defaultLifeSpan();
+                return this;
+            }
+            public Builder snakeImage(){
+                this.snakeImage = new GreenfootImage(50, 50);
+                this.snakeImage.setColor(this.snakeColor);
+                this.snakeImage.fill();
+                return this;
+            }
             
+            public Snake build(){
+                //Here we create the actual snake object, which is always in a fully initialised state when it's returned.
+                Snake snake = new Snake();  //Since the builder is in the Snake class, we can invoke its private constructor.
+                snake.snakeDecorator = this.snakeDecorator;
+                snake.snakeSpeed = this.snakeSpeed;
+                snake.snakeColor = this.snakeColor;
+                snake.snakeLife = this.snakeLife;
+                snake.snakeImage = this.snakeImage;
+                return snake;
+            }
         }
+
+    // public Snake() {
+    //     //snakeSpeed = this.snakeSpeed;
+    //     //snakeColor = this.snakeColor;
+    //     //snakeLife = this.snakeLife;
+    // }
     
-        // public void addBeginningTail(int life) {
-            // if (life == 50) {
-                // //start = new Tail(snakeColor, snakeLife);
-                // getWorld().addObject(new Tail(snakeColor, life), getX()-50, getY());
-            // } else if (life == 150) {
-                // getWorld().addObject(new Tail(snakeColor, life), getX()-50, getY());
-                // getWorld().addObject(new Tail(snakeColor, life), getX()-100, getY());
-            // }
-            
-        // }
+    public void wrapSnakeDecorator(ISnakeDecorator sd) {
+        this.snakeDecorator = sd;
+    }
+
+    // add snake images to myworld
+    public void prepare() {        
+        setImage(snakeImage);               
+    }
         
     public void additionalTail(Color c, int f) {
         getWorld().addObject(new Tail(c, growingFactor+50), getX(), getY());

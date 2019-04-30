@@ -5,7 +5,7 @@ import greenfoot.*;
  * @author Yueqiao Zhang 
  * @version 4/18
  */
-public class BlueSnakeDecorator implements ISnakeDecorator 
+public class BlueSnakeDecorator implements ISnakeDecorator
 {
     /**
      * snake speed decorator
@@ -25,4 +25,7 @@ public class BlueSnakeDecorator implements ISnakeDecorator
     public int increaseSpeed(int speed) {
         return speed - 1;
     }
+
+ 
+    
 }

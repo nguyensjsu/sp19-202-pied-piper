@@ -33,7 +33,7 @@ public class SnakeSelectionWorld extends World
         prepare();
         //initialize myworld
         world = new MyWorld();
-        snake = new Snake();
+        //snake = new Snake();
         gsd = new GreenSnakeDecorator();
         bsd = new BlueSnakeDecorator();
         rsd = new RedSnakeDecorator();
@@ -53,20 +53,38 @@ public class SnakeSelectionWorld extends World
     public void act() {
         // add snake to myworld and jump to myworld
         if(Greenfoot.mouseClicked(gsnake)) {
-            snake.wrapSnakeDecorator(gsd);
-            
+            /** Create snake objecr by Builder Design Partern**/
+            snake = new Snake.Builder(gsd)
+                    .snakeColor()
+                    .snakeSpeed()
+                    .snakeLife()
+                    .snakeImage()
+                    .build();
+
+            /** Add snake object to world**/          
             world.addObject(snake, 150, 125);
             snake.prepare();
             Greenfoot.setWorld(world);
         } else if (Greenfoot.mouseClicked(bsnake)) {
-            snake.wrapSnakeDecorator(bsd);
+            //
+            snake = new Snake.Builder(bsd)
+                    .snakeColor()
+                    .snakeSpeed()
+                    .snakeLife()
+                    .snakeImage()
+                    .build();
             
             world.addObject(snake, 150, 125);
             snake.prepare();
             Greenfoot.setWorld(world);
         } else if (Greenfoot.mouseClicked(rsnake)) {
-            snake.wrapSnakeDecorator(rsd);
-            
+            snake = new Snake.Builder(rsd)
+                    .snakeColor()
+                    .snakeSpeed()
+                    .snakeLife()
+                    .snakeImage()
+                    .build();
+          
             world.addObject(snake, 175, 125);
             snake.prepare();
             Greenfoot.setWorld(world);
