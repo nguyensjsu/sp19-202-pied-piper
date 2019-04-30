@@ -121,10 +121,19 @@
         } 
                      
         
-        if(isAtEdge()){
-            Greenfoot.playSound("Hiss.mp3");
-            Greenfoot.stop();
-            Greenfoot.setWorld(new LeaderBoardScreen());
+        if (isTouching(Tail.class)) {
+            death();
         }
-    } 
+        
+        if(isAtEdge()){
+            death();
+        }
+    }
+    
+    public void death(){
+        Greenfoot.playSound("Hiss.mp3");
+        Greenfoot.stop();
+        Greenfoot.setWorld(new LeaderBoardScreen());
+    }
+    
 }

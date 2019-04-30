@@ -15,7 +15,7 @@ public class BlueSnakeDecorator implements ISnakeDecorator
     }
 
     public int defaultSpeed() {
-    	return 1;
+    	return 20;
     }
 
     public int defaultLifeSpan() {
@@ -23,6 +23,6 @@ public class BlueSnakeDecorator implements ISnakeDecorator
     }
     
     public int increaseSpeed(int speed) {
-        return speed + 2;
+        return speed - 1;
     }
 }
