@@ -77,7 +77,7 @@ public class SnakeSelectionWorld extends World
                     .build();
 
             /** Add snake object to world**/          
-            world.addObject(snake, 150, 125);
+            world.addObject(snake, 175, 125);
             snake.prepare();
             Greenfoot.setWorld(world);
         } else if (Greenfoot.mouseClicked(bsnake)) {
@@ -89,7 +89,7 @@ public class SnakeSelectionWorld extends World
                     .snakeImage()
                     .build();
             
-            world.addObject(snake, 150, 125);
+            world.addObject(snake, 175, 125);
             snake.prepare();
             Greenfoot.setWorld(world);
         } else if (Greenfoot.mouseClicked(rsnake)) {

@@ -16,6 +16,7 @@
         private Color snakeColor;
         private int snakeLife; 
         private GreenfootImage snakeImage;
+        private boolean dead = false;
 
         /**
         **  Set up animation attribute
@@ -145,20 +146,22 @@
             foodEaten++;
         } 
                      
-        
-        if (isTouching(Tail.class)) {
-            death();
-        }
-        
-        if(isAtEdge()){
-            death();
+        if (!dead){
+            if (isTouching(Tail.class)) {
+                death();
+            }
+            
+            else if(isAtEdge()){
+                death();
+            }
         }
     }
     
     public void death(){
+        dead = true;
         Greenfoot.playSound("Hiss.mp3");
         Greenfoot.stop();
-        Greenfoot.setWorld(new LeaderBoardScreen());
+        Greenfoot.setWorld(new LeaderBoardScreen());      
     }
     
 }

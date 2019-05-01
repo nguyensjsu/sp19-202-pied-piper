@@ -16,13 +16,13 @@ public class Item extends Actor
     public void act() 
     {
         if(isTouching(Snake.class)){
-            setLocation(Greenfoot.getRandomNumber(coordinate(9)),
-            Greenfoot.getRandomNumber(coordinate(4)));
+            setLocation(coordinate(Greenfoot.getRandomNumber(21)),
+            coordinate(Greenfoot.getRandomNumber(11)));
         }        
     }
     public int coordinate(int i){
-        i = (i+2)*100;
-        return i;
+        i = (i+2)*50;
+        return i+25;
     }
     public int getCount() {
         return count;
