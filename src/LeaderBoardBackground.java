@@ -8,15 +8,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class LeaderBoardBackground extends LeaderBoardComponent
 {
-    
+     
      private GreenfootImage image1;
      
     public LeaderBoardBackground()
     {
        GreenfootImage image=getImage();
-       image.scale(1000,1000);  
+       image.scale(1200,700);  
        setImage(image);
-       setRotation(90);
+       //setRotation(90);
     }
     
     public void printOnScreen() {}
