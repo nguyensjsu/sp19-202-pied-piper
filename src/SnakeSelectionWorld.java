@@ -45,8 +45,15 @@ public class SnakeSelectionWorld extends World
     private void prepare()
     {
         addObject(gsnake, 100, 90);
+        //Add snake mode description 
+        Label l1 = new Label("Easy Mode", 20, Color.RED);
+        addObject(l1, 100, 250);
         addObject(bsnake, 300, 90);
+        Label l2 = new Label("Hard Mode", 22, Color.BLUE);
+        addObject(l2, 250, 250);
         addObject(rsnake, 500, 90);
+        Label l3 = new Label("Diffcult Mode", 22, Color.BLACK);
+        addObject(l3, 400, 250);
     }
 
     /*Choose different kinds snake by mouse click*/
