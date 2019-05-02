@@ -19,8 +19,8 @@ public class ScoreBoard extends Board
     int powerupcount=0;
     int score=0;
     public ScoreBoard(){
-        GreenfootImage bg = new GreenfootImage("bg.jpg");
-        bg.scale(100,200);
+        GreenfootImage bg = new GreenfootImage("space1.jpg");
+        bg.scale(2400,200);
         setImage(bg);
     }
     public void act() 
