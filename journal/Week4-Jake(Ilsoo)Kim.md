@@ -16,7 +16,7 @@ Jake(Ilsoo) Kim
 - Not problmes.
 
 ### Time Spend
-- Task1: 1 hrs
+- Task1: 2 hrs
 - Task2: 3 hrs
 - Task3: 2 hrs
 - Task4: 3 hrs
