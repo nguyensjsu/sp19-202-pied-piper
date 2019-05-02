@@ -1,4 +1,4 @@
-# Week 3 Scrum Report
+# Week 4 Scrum Report
 ## HaoRanChen
 ### Finished Last Week
 -Task1:Finished Change appearence of Board and make board calculate more than 100 points.
