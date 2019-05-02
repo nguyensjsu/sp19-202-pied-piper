@@ -15,17 +15,17 @@ public class BlueSnakeDecorator implements ISnakeDecorator
     }
 
     public int defaultSpeed() {
-    	return 1;
+    	return 20;
     }
 
-    public int[] defaultLength() {
-        int[] result = new int[2];
-        result[0] = 200;
-        result[1] = 50;
-        return result;
+    public int defaultLifeSpan() {
+        return 150;
     }
     
     public int increaseSpeed(int speed) {
-        return speed + 2;
+        return speed - 1;
     }
+
+ 
+    
 }

@@ -10,6 +10,6 @@ public interface ISnakeDecorator
 {
       Color defaultColor();
       int defaultSpeed();
-      int[] defaultLength();
+      int defaultLifeSpan();
       int increaseSpeed(int speed);
 }

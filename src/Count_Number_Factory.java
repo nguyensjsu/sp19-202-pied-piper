@@ -19,16 +19,16 @@ public class Count_Number_Factory implements Factory
       //for (int i=0;i<9;i++){
         //   images[i]=new GreenfootImage("number_"+i+".png");
       //}
-            images[0]=new GreenfootImage("number_0.png");
-            images[1]=new GreenfootImage("number_1.png");
-            images[2]=new GreenfootImage("number_2.png");
-            images[3]=new GreenfootImage("number_3.png");
-            images[4]=new GreenfootImage("number_4.png");
-            images[5]=new GreenfootImage("number_5.png");
-            images[6]=new GreenfootImage("number_6.png");
-            images[7]=new GreenfootImage("number_7.png");
-            images[8]=new GreenfootImage("number_8.png");
-            images[9]=new GreenfootImage("number_9.png");
+            images[0]=new GreenfootImage("number_0.jpg");
+            images[1]=new GreenfootImage("number_1.jpg");
+            images[2]=new GreenfootImage("number_2.jpg");
+            images[3]=new GreenfootImage("number_3.jpg");
+            images[4]=new GreenfootImage("number_4.jpg");
+            images[5]=new GreenfootImage("number_5.jpg");
+            images[6]=new GreenfootImage("number_6.jpg");
+            images[7]=new GreenfootImage("number_7.jpg");
+            images[8]=new GreenfootImage("number_8.jpg");
+            images[9]=new GreenfootImage("number_9.jpg");
            
       switch(units){
           case 0:list.add(images[0]);break;
