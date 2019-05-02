@@ -1,0 +1,34 @@
+# Week 4 Scrum Report 
+
+## Yueqiao (Janet) Zhang
+
+### Finished Last Week 
+- Task1: Implemented Builder Design Pattern for the snake constructing details 
+- Task2: Helped with Snake Growth logic implementation
+- Task3: Designed Entry Game Screen and found free art snake images
+
+### Planned Next Week 
+- Task1: Prepare Activity Diagram for the Snake Game
+- Task2: Prepare documentation for the design pattern and the whole game class diagram
+- Task3: Help with Video making and demo day presentation
+
+### Problems
+Last week, I was stucked by the snake growth logic. When I was implementing the Tail object 
+to make the snake growth, the tail at the very begining was spiliting with the head. I had 
+problems to choose the correct lifeSpan number with snake speed. 
+
+
+### Time Spend
+
+- Task1: 2 hrs
+- Task2: 2 hrs
+- Task3: 2 hrs
+
+## Yueqiao (Janet) Zhang
+
+- XP Core Value: Communication
+- Last week, when I was stucked by making the snake growth, I talked with my team member, and Alan
+was okay to help me with the growth part. So I introduced him how did I start the growth logic, and
+we talked a lot and where I was stucked and what did I try. Afterwards, he helped me with the growthlogic
+and successfully made the snake move as we wanted. I think commmunication plays an important part when one team 
+member has problem and others can help to solve it, which makes the whole project go well at last. 
