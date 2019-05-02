@@ -21,9 +21,9 @@
         
         
         public FoodBoard(){
-        GreenfootImage bg = new GreenfootImage("bg.jpg");
-        bg.scale(200,200);
-        setImage(bg);
+        //GreenfootImage bg = new GreenfootImage("bg.jpg");
+        //bg.scale(200,200);
+        //setImage(bg);
       
        
     }
