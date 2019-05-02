@@ -15,6 +15,8 @@ import java.io.FileNotFoundException;
 import java.util.*; 
 import java.lang.*; 
 import java.io.*; 
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 /**
  * Write a description of class BackGround here.
  * 
@@ -52,6 +54,11 @@ public class LeaderBoardScreen extends World
     int score9;
     int score10;
     int lowestscore;
+    
+    private StartButton sb;
+    private StartButton eb;
+    private SnakeSelectionWorld ssw;
+    
     /**
      * Constructor for objects of class BackGround.
      * 
@@ -60,9 +67,19 @@ public class LeaderBoardScreen extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1200, 700, 1); 
-        
         prepare();
     }
+    
+    public void act() {
+        // when user press start button, go the snake selection world
+        if(Greenfoot.mouseClicked(sb)) {
+            Greenfoot.setWorld(ssw);
+        }
+        if(Greenfoot.mouseClicked(eb)) {
+            Greenfoot.stop();
+        }
+    }
+    
     
     private void prepare()
     {
@@ -127,7 +144,11 @@ public class LeaderBoardScreen extends World
             
             if(Integer.parseInt(tempinputScore)>lowestscore)
             {
-                 String inputname = JOptionPane.showInputDialog("Please Your Name");
+                 ImageIcon icon = new ImageIcon("snake.png");
+                 String inputname = (String)JOptionPane.showInputDialog(null, "Please Your Name", 
+                null, JOptionPane.QUESTION_MESSAGE, icon, null, "No Name");
+                
+                 //String inputname = JOptionPane.showInputDialog("Please Your Name");
                  String inputscore = JOptionPane.showInputDialog("Please Your Score");
                  
                  input = input + inputname + "," + inputscore + ";"; // new name and score
@@ -243,7 +264,15 @@ public class LeaderBoardScreen extends World
         LeaderBoardComponent LeaderBoardbackground = new LeaderBoardBackground();
         addObject(LeaderBoardbackground, 600,350);
         leaderboardcomponent.addChild(LeaderBoardbackground);
-       
+        
+        sb = new StartButton();
+        addObject(sb, 550, 650);
+        ssw = new SnakeSelectionWorld();
+      
+        eb = new StartButton();
+        addObject(eb, 700, 650);
+        ssw = new SnakeSelectionWorld();
+        
         LeaderBoardComponent LeaderBoardTitle = new LeaderBoardTitle("LEADER BOARD",600,50);
         addObject(LeaderBoardTitle, 0, 0);
         leaderboardcomponent.addChild(LeaderBoardTitle);
@@ -382,7 +411,9 @@ public class LeaderBoardScreen extends World
         {
             if(filewriter != null)
             {
-                try { filewriter.close(); }
+                try { 
+                    filewriter.close(); 
+                }
                 catch (Exception e) { e.printStackTrace(); }
             }
         }    
@@ -415,9 +446,6 @@ public class LeaderBoardScreen extends World
         }  
         return br;
     }
-    public void act()
-    {
-         
-    }
+    
     
 }

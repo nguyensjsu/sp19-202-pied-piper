@@ -16,6 +16,7 @@ public class LeaderBoardBackground extends LeaderBoardComponent
        GreenfootImage image=getImage();
        image.scale(1200,700);  
        setImage(image);
+       
        //setRotation(90);
     }
     
