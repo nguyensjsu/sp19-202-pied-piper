@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Board here.
+ * parent board and background provider
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @HaoRan_Chen 
+ * 
  */
 public class Board extends Actor implements Observer
 {

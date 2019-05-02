@@ -3,6 +3,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 import java.util.ArrayList;
 import java.util.List;
+/**
+     * Write a description of class FoodBoard here.
+     * 
+     * @author (HaoRan Chen) 
+     * @version (4/19)
+     */
 public class PowerUpBoard extends Board
 {
     /**
