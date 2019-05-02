@@ -4,8 +4,8 @@ import java.util.List;
 /**
  * Write a description of class PowerUp here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Half HaoRan Chen) 
+ * @version (4/19)
  */
 public class PowerUp extends Item 
 {

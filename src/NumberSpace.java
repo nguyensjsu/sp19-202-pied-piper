@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class UnitsSpace here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (HaoRan Chen) 
+ * @version (4/19)
  */
 public class NumberSpace extends Actor
 {

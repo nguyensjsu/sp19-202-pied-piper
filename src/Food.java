@@ -5,8 +5,8 @@ import java.util.List;
 /**
  * Write a description of class Food here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (half HaoRan Chne) 
+ * @version (4/19)
  */
 public class Food extends Item
 {

@@ -3,8 +3,8 @@ import greenfoot.*;
 /**
  * Write a description of class FoodBoard_Number_Factory here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (HaoRan Chen) 
+ * @version (4/19)
  */
 public class Count_Number_Factory implements Factory 
 {
