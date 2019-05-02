@@ -14,6 +14,6 @@ Task: Talking with team members to see what else we could do, and draw some diag
  
  ## HaoRan Chen
  -XP Core Value: respect
- -Our team is good, team members are kind, and help me solve the problem. I also Wish sometimes we could face the problem together more instead of ......
+ -Our team is good, team members are kind, and helped me solve the problem. I also Wish sometimes we could face the problem  together and try to solve it.
  
  
