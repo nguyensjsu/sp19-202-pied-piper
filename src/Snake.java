@@ -154,9 +154,6 @@
             else if(isAtEdge()){
                 death();
             }
-            else if(isTouching(Board.class)){
-                death();
-            }
         }
     }
     
