@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-import java.awt.*;
+
 import java.util.ArrayList;
 import java.util.List;
 /**
@@ -16,12 +16,14 @@ public class ScoreBoard extends Board
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private Number_Image number_image;
+    private NumberSpace hundredsspace;
     int powerupcount=0;
     int score=0;
     public ScoreBoard(){
-        GreenfootImage bg = new GreenfootImage("space1.jpg");
-        bg.scale(2400,200);
-        setImage(bg);
+     Color bgColor = new Color(0, 0, 0, 0);
+     GreenfootImage bg=new GreenfootImage("score:",40,Color.RED,bgColor);
+     bg.scale(100,50);
+     setImage(bg);
     }
     public void act() 
     {
@@ -50,7 +52,8 @@ public class ScoreBoard extends Board
      ArrayList list=number_image.getmyImage();
      GreenfootImage units=(GreenfootImage) list.get(0);
      GreenfootImage digits=(GreenfootImage)list.get(1);
-     
+     GreenfootImage hundreds=(GreenfootImage)list.get(2);
+    
      
      
      world=this.getWorld();
@@ -59,13 +62,12 @@ public class ScoreBoard extends Board
      unitsspace.set_the_Image();
      digitsspace=new NumberSpace(digits);
      digitsspace.set_the_Image();
+     hundredsspace=new NumberSpace(hundreds);
+     hundredsspace.set_the_Image();
      
-     
-    
-    
-     world.addObject(unitsspace,625,50);
-     world.addObject(digitsspace,575,50);
-    
+     world.addObject(unitsspace,660,70);
+     world.addObject(digitsspace,610,70);
+     world.addObject(hundredsspace,560,70);
     }
 
 }

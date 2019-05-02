@@ -20,7 +20,9 @@ public class Board extends Actor implements Observer
    
     
     public  Board(){
-    
+        GreenfootImage bg = new GreenfootImage("space1.jpg");
+        bg.scale(1200,200);
+        setImage(bg);
     }
     public void show(int count){}
     public void update(Item item){}

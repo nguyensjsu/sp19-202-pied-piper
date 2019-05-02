@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-import java.awt.*;
+
 import java.util.ArrayList;
 import java.util.List;
 public class PowerUpBoard extends Board
@@ -13,9 +13,11 @@ public class PowerUpBoard extends Board
     
     List<Board> list= new ArrayList <Board>();
     public PowerUpBoard(){
-     // GreenfootImage bg = new GreenfootImage("bg.jpg");
-     //   bg.scale(200,200);
-     //   setImage(bg);
+     Color bgColor = new Color(0, 0, 0, 0);
+     GreenfootImage bg=new GreenfootImage("speed:",40,Color.RED,bgColor);
+     bg.scale(100,50);
+     setImage(bg);
+      
     }
     
     public void act() 
@@ -48,8 +50,8 @@ public class PowerUpBoard extends Board
      
     
      //world.addObject(digitsspace,50,50);
-     world.addObject(unitsspace,1175,50);
-     world.addObject(digitsspace,1125,50);
+     world.addObject(unitsspace,1175,70);
+     world.addObject(digitsspace,1125,70);
      
      
      

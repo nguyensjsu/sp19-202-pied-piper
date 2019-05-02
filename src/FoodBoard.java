@@ -1,6 +1,6 @@
     import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
     
-    import java.awt.*;
+    //import java.awt.*;
     import java.util.ArrayList;
     import java.util.List;
     
@@ -21,9 +21,11 @@
         
         
         public FoodBoard(){
-        //GreenfootImage bg = new GreenfootImage("bg.jpg");
-        //bg.scale(200,200);
-        //setImage(bg);
+               
+        Color bgColor = new Color(0, 0, 0, 0);
+        GreenfootImage bg=new GreenfootImage("apple:",40,Color.RED,bgColor);
+        bg.scale(100,50);
+        setImage(bg);
       
        
     }
@@ -50,7 +52,7 @@
      GreenfootImage units=(GreenfootImage) list.get(0);
      GreenfootImage digits=(GreenfootImage)list.get(1);
      
-     world=this.getWorld();
+     
      
      unitsspace=new NumberSpace(units);
      unitsspace.set_the_Image();
@@ -58,10 +60,13 @@
      digitsspace.set_the_Image();
      
      
-    
+    world=this.getWorld();
      //world.addObject(digitsspace,50,50);
-     world.addObject(unitsspace,75,50);
-     world.addObject(digitsspace,25,50);
+    
+     
+     
+     world.addObject(unitsspace,75,70);
+     world.addObject(digitsspace,25,70);
      //this.getWorld();
      //this.getWorld().setPaintOrder(Board.class,UnitsSpace.class);
     
