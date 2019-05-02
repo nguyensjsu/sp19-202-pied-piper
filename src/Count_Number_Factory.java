@@ -16,6 +16,7 @@ public class Count_Number_Factory implements Factory
     public Number_Image makeImage(int count){
         int units=count%10;
         int digits=count/10%10;
+        int hundreds=count/100%10;
       //for (int i=0;i<9;i++){
         //   images[i]=new GreenfootImage("number_"+i+".png");
       //}
@@ -43,6 +44,18 @@ public class Count_Number_Factory implements Factory
           case 9:list.add(images[9]);break;
         }
       switch (digits){
+          case 0:list.add(images[0]);break;
+          case 1:list.add(images[1]);break;
+          case 2:list.add(images[2]);break;
+          case 3:list.add(images[3]);break;
+          case 4:list.add(images[4]);break;
+          case 5:list.add(images[5]);break;
+          case 6:list.add(images[6]);break;
+          case 7:list.add(images[7]);break;
+          case 8:list.add(images[8]);break;
+          case 9:list.add(images[9]);break;
+      }
+       switch (hundreds){
           case 0:list.add(images[0]);break;
           case 1:list.add(images[1]);break;
           case 2:list.add(images[2]);break;

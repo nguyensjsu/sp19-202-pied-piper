@@ -3,6 +3,7 @@ import greenfoot.*;
  
 public class Label extends Actor
 {
+    
     public Label(String text, int fontSize, Color fontColor)
     {
         // create the text image
@@ -23,4 +24,5 @@ public class Label extends Actor
     public void act() 
     {
     }    
+   
 }
