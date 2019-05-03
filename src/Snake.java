@@ -163,7 +163,7 @@
     public void death(){
         dead = true;
         Greenfoot.playSound("Hiss.mp3");
-        Greenfoot.stop();
+        //Greenfoot.stop();
         Greenfoot.setWorld(new LeaderBoardScreen());      
     }
     
