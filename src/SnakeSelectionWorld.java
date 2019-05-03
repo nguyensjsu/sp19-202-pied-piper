@@ -52,16 +52,22 @@ public class SnakeSelectionWorld extends World
         //Add snake mode description 
         Label l1 = new Label("Easy", 22, Color.GREEN);
         addObject(l1, 180, 350);
+        Label l11 = new Label("Recommended for beginners.\nPowerups will also grow the tail.\nThe starting length is longer.", 15, Color.BLACK);
+        addObject(l11, 100, 390);
 
         /* add blue snake */
         addObject(bsnake, 280, 150);
-        Label l2 = new Label("Medium", 22, Color.BLUE);
-        addObject(l2, 350, 350);
+        Label l2 = new Label("Hard", 22, Color.BLUE);
+        addObject(l2, 370, 350);
+        Label l22 = new Label("The fastest snake. Powerups\nwill slow down the snake.", 15, Color.BLACK);
+        addObject(l22, 310, 398);
 
         /* add red snake */
         addObject(rsnake, 470, 150);
-        Label l3 = new Label("Hard", 22, Color.RED);
+        Label l3 = new Label("Classic", 22, Color.RED);
         addObject(l3, 550, 350);
+        Label l33 = new Label("The classic snake experience.\nPowerups speed up the snake.\nThe starting length is normal.", 15, Color.BLACK);
+        addObject(l33, 500, 390);
     }
 
     /*Choose different kinds snake by mouse click*/

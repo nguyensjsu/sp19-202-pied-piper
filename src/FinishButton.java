@@ -12,7 +12,7 @@ public class FinishButton extends Actor
 
     public FinishButton(){
         buttonImage = new GreenfootImage("finish.png");
-        buttonImage.scale(80,50);
+        buttonImage.scale(120,50);
         setImage(buttonImage);
     }  
 }
