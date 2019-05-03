@@ -27,7 +27,7 @@
 
      
 
-
+        // get resource from https://dzone.com/articles/design-patterns-the-builder-pattern
         /** Added Builder Design Pattern for constructing snake details
         **/
         public static class Builder implements ISnakeComponent {
