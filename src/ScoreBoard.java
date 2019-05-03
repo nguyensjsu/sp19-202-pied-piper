@@ -15,15 +15,18 @@ public class ScoreBoard extends Board
      * Act - do whatever the ScoreBoard wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private static ScoreBoard instance;
     private Number_Image number_image;
     private NumberSpace hundredsspace;
     int powerupcount=0;
-    int score=0;
+    public int score=0;
+    
     public ScoreBoard(){
      Color bgColor = new Color(0, 0, 0, 0);
      GreenfootImage bg=new GreenfootImage("score:",40,Color.RED,bgColor);
      bg.scale(100,50);
      setImage(bg);
+     
     }
     public void act() 
     {
@@ -33,19 +36,21 @@ public class ScoreBoard extends Board
     @Override
     public void update(Item item) {
       
+        ScoreBoard scb = ScoreBoard.getInstance();
+            
         if(item instanceof Food){
             if(powerupcount==0){score=score+1;}
             score=score+2*powerupcount;
-            setScore(score);
+            scb.setScore(score);
         } 
         else{
             powerupcount+=1;
         }
       
-        show(score);
+        show(this.score);
     }
    
-    public void setScore(int a){score=a;}
+    public void setScore(int a){this.score=a;}
     public void show(int a){
      Count_Number_Factory number_factory=new Count_Number_Factory();
      number_image=number_factory.makeImage(score);
@@ -68,6 +73,16 @@ public class ScoreBoard extends Board
      world.addObject(unitsspace,660,70);
      world.addObject(digitsspace,610,70);
      world.addObject(hundredsspace,560,70);
+    }
+    
+    public static ScoreBoard getInstance() {
+	if (null==instance)
+	instance = new ScoreBoard();
+	return instance;
+    }
+	
+    public int getscore(){
+        return this.score;
     }
 
 }
