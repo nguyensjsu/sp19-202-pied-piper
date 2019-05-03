@@ -52,7 +52,7 @@ public class AchievementBoard extends Board implements IObserver
         scoreboard = scoreboard.getInstance();
         
         int currentscore = scoreboard.getscore();
-        currentscore = currentscore + 5;
+        currentscore = currentscore + 50;
         scoreboard.setScore(currentscore);  
        
     }
