@@ -9,7 +9,7 @@ import java.util.List;
      * @author (HaoRan Chen) 
      * @version (4/19)
      */
-public class PowerUpBoard extends Board
+public class PowerUpBoard extends Board implements ISubject
 {
     /**
      * Act - do whatever the PowerUpBoard wants to do. This method is called whenever
@@ -33,9 +33,14 @@ public class PowerUpBoard extends Board
     
     
     public void update(Item item){
-        PowerUp powerup=(PowerUp)item;
+     PowerUp powerup=(PowerUp)item;
         
      powerup.setCount(powerup.getCount()+1);
+     
+     if(powerup.getCount() == 5)
+     {
+        notifyObservers(item) ;
+     }
     
      show(powerup.getCount());
     
@@ -59,19 +64,23 @@ public class PowerUpBoard extends Board
      world.addObject(unitsspace,1175,70);
      world.addObject(digitsspace,1125,70);
      
-     
-     
-     
-     //this.getImage().clear();
-     //this.getWorld().getBackground().drawImage(units,1145, 0);
-     //this.getWorld().getBackground().drawImage(digits,1080, 0);
-    
-     //GreenfootImage foodboardimage=this.getImage();
-    
-   
-
     }
     
+    public void register(Board board)
+    {
+        list.add(board);
+    }
+    
+    public void unregister(IObserver obj)
+    {
+    }
+    
+    public void notifyObservers(Item item)
+    {
+        AchievementBoard achievementBoard=(AchievementBoard)list.get(0);
+        
+        achievementBoard.update(item);
+    }
     
     
 }

@@ -10,7 +10,7 @@
      * @author (HaoRan Chen) 
      * @version (4/19)
      */
-    public class FoodBoard extends Board
+    public class FoodBoard extends Board implements ISubject
     {
         /**
          * Act - do whatever the FoodBoard wants to do. This method is called whenever
@@ -18,7 +18,9 @@
          */
         private Number_Image number_image;
         
+        int count = 0;
         
+        List<Board> list=new ArrayList<Board>();
         
         public FoodBoard(){
                
@@ -30,7 +32,6 @@
        
     }
     
-    List<Board> list= new ArrayList <Board>();
     public void act() 
     {
         // Add your action code here.
@@ -41,6 +42,11 @@
       Food food=(Food)item;
         
      food.setCount(food.getCount()+1);
+     
+     if(food.getCount() == 5)
+     {
+         notifyObservers(item);
+     }
     
      show(food.getCount());
     }
@@ -52,40 +58,33 @@
      GreenfootImage units=(GreenfootImage) list.get(0);
      GreenfootImage digits=(GreenfootImage)list.get(1);
      
-     
-     
      unitsspace=new NumberSpace(units);
      unitsspace.set_the_Image();
      digitsspace=new NumberSpace(digits);
      digitsspace.set_the_Image();
      
-     
-    world=this.getWorld();
+     world=this.getWorld();
      //world.addObject(digitsspace,50,50);
     
-     
-     
      world.addObject(unitsspace,75,70);
      world.addObject(digitsspace,25,70);
-     //this.getWorld();
-     //this.getWorld().setPaintOrder(Board.class,UnitsSpace.class);
-    
-     
-    
-     
-     
-    
-     
-     
-     //this.getWorld().getBackground().drawImage(units, 60, 0);
-     //this.getWorld().getBackground().drawImage(digits, 0, 0);
-    
-     //GreenfootImage foodboardimage=this.getImage();
-    
-   
-
     }
     
-   
+    public void register(Board board)
+    {
+        list.add(board);
+    }
+    
+    public void unregister(IObserver obj)
+    {
+    }
+    
+    public void notifyObservers(Item item)
+    {
+        AchievementBoard achievementBoard=(AchievementBoard)list.get(0);
+        
+        achievementBoard.update(item);
+    }
+    
 
 }

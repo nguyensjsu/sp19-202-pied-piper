@@ -16,7 +16,12 @@ public class SnakeSelectionWorld extends World
     private GreenSnake gsnake;
     private BlueSnake bsnake;
     private RedSnake rsnake;
-
+    
+    private AchievementBoard achievementBoard;
+    private Message message1;
+    private Message message2;
+    private Message message3;
+    
     private MyWorld world;
     private Snake snake;
     /**
@@ -33,6 +38,7 @@ public class SnakeSelectionWorld extends World
         gsnake = new GreenSnake();
         bsnake = new BlueSnake();
         rsnake = new RedSnake();
+        achievementBoard = new AchievementBoard();
         prepare();
         //initialize myworld
         world = new MyWorld();
@@ -68,6 +74,18 @@ public class SnakeSelectionWorld extends World
         addObject(l3, 550, 350);
         Label l33 = new Label("The classic snake experience.\nPowerups speed up the snake.\nThe starting length is normal.", 15, Color.BLACK);
         addObject(l33, 500, 390);
+        
+        addObject(achievementBoard, 300 , 350);
+        Food food = new Food();
+        addObject(food ,180,340);
+        PowerUp powerUp = new PowerUp();
+        addObject(powerUp,180,380);
+        message1 = new Message("* 5 = +50", 250, 80);
+        addObject(message1, 330, 350);
+        message2 = new Message("* 5 = +50", 250, 80);
+        addObject(message2, 330, 390);
+        message3 = new Message("Achievements", 250, 80);
+        addObject(message3, 350, 320);
     }
 
     /*Choose different kinds snake by mouse click*/
