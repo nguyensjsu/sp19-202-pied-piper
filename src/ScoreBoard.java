@@ -19,7 +19,7 @@ public class ScoreBoard extends Board
     private Number_Image number_image;
     private NumberSpace hundredsspace;
     int powerupcount=0;
-    public int score=0;
+    public static int score=0;
     
     public ScoreBoard(){
      Color bgColor = new Color(0, 0, 0, 0);
@@ -33,7 +33,6 @@ public class ScoreBoard extends Board
         // Add your action code here.
     }
 
-    @Override
     public void update(Item item) {
       
         ScoreBoard scb = ScoreBoard.getInstance();
