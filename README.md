@@ -11,9 +11,12 @@ Pied Piper
 * [Janet(Yueqiao)](https://github.com/treetree0211)
 * [Prachi](https://github.com/)
 
-## Project Name
+## Project Name: Snake Game
 
 ## Project Description
+Snake Game is a casual game that players can choose different kinds of snakes and 
+navigate snake to move in the game board to eat apples and powerup balls to get points.
+It provides continually 
 
 ## Project Progress
 
