@@ -19,8 +19,9 @@ public class ScoreBoard extends Board
     private Number_Image number_image;
     private NumberSpace hundredsspace;
     int powerupcount=0;
+    int count=0;
     public static int score=0;
-    private int count=0;
+    
     public ScoreBoard(){
      Color bgColor = new Color(0, 0, 0, 0);
      GreenfootImage bg=new GreenfootImage("score:",40,Color.RED,bgColor);
@@ -30,9 +31,9 @@ public class ScoreBoard extends Board
     }
     public void act() 
     {
-          if(count==0){
-        show(count);
-        }
+        // Add your action code here.
+         if(count==0){
+        show(count);}
     }
 
     public void update(Item item) {
@@ -78,11 +79,11 @@ public class ScoreBoard extends Board
     }
     
     public static ScoreBoard getInstance() {
-	if (null==instance)
-	instance = new ScoreBoard();
-	return instance;
+    if (null==instance)
+    instance = new ScoreBoard();
+    return instance;
     }
-	
+    
     public int getscore(){
         return this.score;
     }
