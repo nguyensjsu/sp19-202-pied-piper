@@ -6,7 +6,7 @@
      * @author (your name) 
      * @version (a version number or a date)
      */
-    public class Snake extends Actor
+    public class Snake extends Actor 
     {   
         /**
          * Add snake attribute, 
@@ -25,9 +25,12 @@
         private int updateSpeed = 0;     
         private int foodEaten = 0;
 
+     
+
+        // get resource from https://dzone.com/articles/design-patterns-the-builder-pattern
         /** Added Builder Design Pattern for constructing snake details
         **/
-        public static class Builder {
+        public static class Builder implements ISnakeComponent {
             private int snakeSpeed;
             private int snakeLife;
             private ISnakeDecorator snakeDecorator;
@@ -38,15 +41,15 @@
                 this.snakeDecorator = snakeDecorator;
             }
             public Builder snakeColor(){
-                this.snakeColor = snakeDecorator.defaultColor();
+                this.snakeColor = this.snakeDecoratorColor();
                 return this;  //By returning the builder each time, we can create a fluent interface.
             }
             public Builder snakeSpeed(){
-                this.snakeSpeed = snakeDecorator.defaultSpeed();
+                this.snakeSpeed = snakeDecoratorSpeed();
                 return this;  //By returning the builder each time, we can create a fluent interface.
             }
             public Builder snakeLife(){
-                this.snakeLife = snakeDecorator.defaultLifeSpan();
+                this.snakeLife = snakeDecoratorLife();
                 return this;
             }
             public Builder snakeImage(){
@@ -65,6 +68,20 @@
                 snake.snakeLife = this.snakeLife;
                 snake.snakeImage = this.snakeImage;
                 return snake;
+            }
+
+                   /** Added Snake decorator components
+            **/
+            public Color snakeDecoratorColor() {
+                return snakeDecorator.defaultColor();
+            }
+
+            public int snakeDecoratorSpeed() {
+                return snakeDecorator.defaultSpeed();
+            }
+
+            public int snakeDecoratorLife() {
+                return snakeDecorator.defaultLifeSpan();
             }
         }
 

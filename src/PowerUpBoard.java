@@ -9,14 +9,14 @@ import java.util.List;
      * @author (HaoRan Chen) 
      * @version (4/19)
      */
-public class PowerUpBoard extends Board
+public class PowerUpBoard extends Board implements ISubject
 {
     /**
      * Act - do whatever the PowerUpBoard wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private Number_Image number_image;
-    
+    private int count=0;
     List<Board> list= new ArrayList <Board>();
     public PowerUpBoard(){
      Color bgColor = new Color(0, 0, 0, 0);
@@ -28,15 +28,21 @@ public class PowerUpBoard extends Board
     
     public void act() 
     {
-      
+       if(count==0){
+        show(count);}
     }
     
     
     public void update(Item item){
-        PowerUp powerup=(PowerUp)item;
+     PowerUp powerup=(PowerUp)item;
         
      powerup.setCount(powerup.getCount()+1);
-    
+     
+     if(powerup.getCount() == 5)
+     {
+        notifyObservers(item) ;
+     }
+    count++;
      show(powerup.getCount());
     
     } public void show(int count){
@@ -56,22 +62,26 @@ public class PowerUpBoard extends Board
      
     
      //world.addObject(digitsspace,50,50);
-     world.addObject(unitsspace,1175,70);
-     world.addObject(digitsspace,1125,70);
+     world.addObject(unitsspace,390,70);
+     world.addObject(digitsspace,340,70);
      
-     
-     
-     
-     //this.getImage().clear();
-     //this.getWorld().getBackground().drawImage(units,1145, 0);
-     //this.getWorld().getBackground().drawImage(digits,1080, 0);
-    
-     //GreenfootImage foodboardimage=this.getImage();
-    
-   
-
     }
     
+    public void register(Board board)
+    {
+        list.add(board);
+    }
+    
+    public void unregister(IObserver obj)
+    {
+    }
+    
+    public void notifyObservers(Item item)
+    {
+        AchievementBoard achievementBoard=(AchievementBoard)list.get(0);
+        
+        achievementBoard.update(item);
+    }
     
     
 }

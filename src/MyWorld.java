@@ -31,25 +31,30 @@ public class MyWorld extends World
     private void prepare()
     {
         //addObject(new Snake(), 125, 125);
-        this.setPaintOrder(NumberSpace.class,FoodBoard.class,PowerUpBoard.class,ScoreBoard.class);
+        this.setPaintOrder(AchievementBoard.class, NumberSpace.class,FoodBoard.class,PowerUpBoard.class,ScoreBoard.class);
         
         //Snake snake=new Snake();
         Board board=new Board();
         PowerUpBoard powerupboard=new  PowerUpBoard();
         FoodBoard foodboard=new FoodBoard();
         ScoreBoard scoreboard=new ScoreBoard();
+        AchievementBoard achievementboard = new AchievementBoard();
         Food food = new Food();
         food.attach(foodboard);
+        foodboard.register(achievementboard);
         food.attach(scoreboard);
         addObject(food,525,125);
         PowerUp powerUp = new PowerUp();
         powerUp.attach(powerupboard);
         powerUp.attach(scoreboard);
+        powerupboard.register(achievementboard);
         addObject(board,600,0);
         addObject(powerUp,375,175);
         addObject(foodboard,50,10);
-        addObject(powerupboard,1150,10);
-        addObject(scoreboard,600,10);
+        addObject(powerupboard,350,10);
+        addObject(scoreboard,200,10);
+        addObject(achievementboard, 300 , 350);
+        achievementboard.setLocation(600, 600);
        
     }
 }

@@ -17,6 +17,7 @@ import java.lang.*;
 import java.io.*; 
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+
 /**
  * Write a description of class BackGround here.
  * 
@@ -55,10 +56,10 @@ public class LeaderBoardScreen extends World
     int score10;
     int lowestscore;
     
-    private StartButton sb;
-    private StartButton eb;
+    private ReplayButton sb;
+    private FinishButton eb;
     private SnakeSelectionWorld ssw;
-    
+  
     /**
      * Constructor for objects of class BackGround.
      * 
@@ -83,10 +84,12 @@ public class LeaderBoardScreen extends World
     
     private void prepare()
     {
+        
+        
         String tempinputValue = "No Name";
         //writefile(inputValue);
     
-        String tempinputScore = JOptionPane.showInputDialog("Please Your Score");
+       //String tempinputScore = JOptionPane.showInputDialog("Please Your Score");
         
         br = readfile();
         String input="";
@@ -94,6 +97,11 @@ public class LeaderBoardScreen extends World
         String Winput="";
         
         try{
+            
+            ScoreBoard scb = ScoreBoard.getInstance();
+            int tempinputScore= scb.getscore();
+            //System.out.println("realscore=="+realscore);
+            
             /* Read data - input and tempinput from data.txt file */
             input = br.readLine();
             tempinput = input;
@@ -106,14 +114,15 @@ public class LeaderBoardScreen extends World
             String strArraytemp[] = tempinput.split(";");
             
             /* if data is less than 10, make No Name list. */
-            if(strArraytemp.length<19)
+            if(strArraytemp.length<10)
             {
                 for(int i=0; i < 10-strArraytemp.length; i++){
                 tempinput=tempinput + "No Name,0;";
                 }
             }
            String usertempArray[] = tempinput.split(";");
-            
+           
+           //System.out.println("tempinput=="+tempinput);
                 /* check Array[]*/
                 //for(int i=0; i < usertempArray.length; i++){
                 //System.out.println("strArray["+i+"]"+usertempArray[i]);
@@ -135,22 +144,23 @@ public class LeaderBoardScreen extends World
                 //System.out.println("strArray["+i+"]"+usertempArray[i]);
                 //}
                 
-            lowestname= usertempArray[strArraytemp.length-1].substring(0,usertempArray[strArraytemp.length-1].indexOf(","));
-            lowestscore = Integer.parseInt(usertempArray[strArraytemp.length-1].substring(usertempArray[strArraytemp.length-1].indexOf(",")+1, usertempArray[strArraytemp.length-1].length()));
+            lowestname= usertempArray[usertempArray.length-1].substring(0,usertempArray[usertempArray.length-1].indexOf(","));
+            lowestscore = Integer.parseInt(usertempArray[usertempArray.length-1].substring(usertempArray[usertempArray.length-1].indexOf(",")+1, usertempArray[strArraytemp.length-1].length()));
         
             //System.out.println("strArraytemp.length+"+strArraytemp.length);
             //System.out.println("lowestname+"+lowestname);
             //System.out.println("lowestscore+"+lowestscore);
             
-            if(Integer.parseInt(tempinputScore)>lowestscore)
+            //if(Integer.parseInt(tempinputScore)>lowestscore)
+            if(tempinputScore>lowestscore)
             {
                  ImageIcon icon = new ImageIcon("snake.png");
                  String inputname = (String)JOptionPane.showInputDialog(null, "Please Your Name", 
                 null, JOptionPane.QUESTION_MESSAGE, icon, null, "No Name");
                 
                  //String inputname = JOptionPane.showInputDialog("Please Your Name");
-                 String inputscore = JOptionPane.showInputDialog("Please Your Score");
-                 
+                 //String inputscore = JOptionPane.showInputDialog("Please Your Score");
+                 int inputscore=tempinputScore;
                  input = input + inputname + "," + inputscore + ";"; // new name and score
                  String strArraytemp2[] = input.split(";");
             
@@ -265,11 +275,11 @@ public class LeaderBoardScreen extends World
         addObject(LeaderBoardbackground, 600,350);
         leaderboardcomponent.addChild(LeaderBoardbackground);
         
-        sb = new StartButton();
+        sb = new ReplayButton();
         addObject(sb, 550, 650);
         ssw = new SnakeSelectionWorld();
       
-        eb = new StartButton();
+        eb = new FinishButton();
         addObject(eb, 700, 650);
         ssw = new SnakeSelectionWorld();
         
