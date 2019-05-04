@@ -14,6 +14,9 @@ Pied Piper
 
 ## Project Name: Snake Game
 
+## Ad Video:
+https://youtu.be/nYEkLSLgdjc
+
 ## Project Description
 "Snake" is a casual game created in Greenfoot in which players can control one of three selectable snakes, and move around inside a game board to eat food. Eating food consequently will increase the length of the snake and make the game more challenging. Speed powerup items are also available to consume, which adds a multiplier the player’s score when picking up future food. The player is offered a continuous and challenging game experience by weighing the risk reward between consuming food and powerups while attempting to stay alive by avoiding colliding into any walls or the snake’s tail.
 
@@ -36,23 +39,23 @@ Week 4: Implementation of command design pattern for controls, polished logic fo
 https://github.com/nguyensjsu/sp19-202-pied-piper/projects
 
 ### Project Journal
-## Alan
+### Alan
 - Week 2: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week%202%20-%20Alan.md
 - Week 3: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week%203%20-%20Alan.md
 - Week 4: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week%204%20-%20Alan.md
-## Yueqiao(Janet)
+### Yueqiao(Janet)
 - Week 2: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week2-Yueqiao(Janet).mdown
 - Week 3: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week3-Yueqiao(Janet)%20Zhang.md
 - Week 4: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week4-Yueqiao(Janet)%20Zhang.mdown
-## Jake (Ilsoo Kim)
+### Jake (Ilsoo Kim)
 - Week 2: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week2-Jake(Ilsoo)Kim.md
 - Week 3: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week3-Jake(Ilsoo)Kim.md
 - Week 4: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week4-Jake(Ilsoo)Kim.md
-## Haoran
+### Haoran
 - Week 2: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week2-HaoRanChen.md
 - Week 3: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week3-HaoRanChen.md
 - Week 4: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week4-HaoRanChen.md
-## Prachi
+### Prachi
 - Week 2: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week%202%20-Prachi.md.txt
 - Week 3: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week%203%20-Prachi.md
 - Week 4: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week%204%20-%20Prachi.md
