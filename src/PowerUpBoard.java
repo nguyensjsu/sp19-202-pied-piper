@@ -28,8 +28,9 @@ public class PowerUpBoard extends Board implements ISubject
     
     public void act() 
     {
-       if(count==0){
-        show(count);}
+        if(count==0){
+        show(count);
+        }
     }
     
     
@@ -42,9 +43,9 @@ public class PowerUpBoard extends Board implements ISubject
      {
         notifyObservers(item) ;
      }
-    count++;
-     show(powerup.getCount());
     
+     show(powerup.getCount());
+    count++;
     } public void show(int count){
        
      Count_Number_Factory number_factory=new Count_Number_Factory();
@@ -62,7 +63,7 @@ public class PowerUpBoard extends Board implements ISubject
      
     
      //world.addObject(digitsspace,50,50);
-     world.addObject(unitsspace,390,70);
+       world.addObject(unitsspace,390,70);
      world.addObject(digitsspace,340,70);
      
     }

@@ -35,8 +35,9 @@
     public void act() 
     {
         // Add your action code here.
-          if(count==0){
-        show(count);}
+        if(count==0){
+        show(count);
+        }
         
     }
     public void update(Item item){

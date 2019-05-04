@@ -20,7 +20,7 @@ public class ScoreBoard extends Board
     private NumberSpace hundredsspace;
     int powerupcount=0;
     public static int score=0;
-    
+    private int count=0;
     public ScoreBoard(){
      Color bgColor = new Color(0, 0, 0, 0);
      GreenfootImage bg=new GreenfootImage("score:",40,Color.RED,bgColor);
@@ -30,9 +30,9 @@ public class ScoreBoard extends Board
     }
     public void act() 
     {
-        // Add your action code here.
-         if(score==0){
-        show(score);}
+          if(count==0){
+        show(count);
+        }
     }
 
     public void update(Item item) {
@@ -49,6 +49,7 @@ public class ScoreBoard extends Board
         }
       
         show(this.score);
+        count++;
     }
    
     public void setScore(int a){this.score=a;}
