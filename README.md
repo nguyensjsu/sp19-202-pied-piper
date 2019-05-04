@@ -36,6 +36,26 @@ Week 4: Implementation of command design pattern for controls, polished logic fo
 https://github.com/nguyensjsu/sp19-202-pied-piper/projects
 
 ### Project Journal
+## Alan
+- Week 2: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week%202%20-%20Alan.md
+- Week 3: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week%203%20-%20Alan.md
+- Week 4: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week%204%20-%20Alan.md
+## Yueqiao(Janet)
+- Week 2: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week2-Yueqiao(Janet).mdown
+- Week 3: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week3-Yueqiao(Janet)%20Zhang.md
+- Week 4: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week4-Yueqiao(Janet)%20Zhang.mdown
+## Jake (Ilsoo Kim)
+- Week 2: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week2-Jake(Ilsoo)Kim.md
+- Week 3: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week3-Jake(Ilsoo)Kim.md
+- Week 4: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week4-Jake(Ilsoo)Kim.md
+## Haoran
+- Week 2: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week2-HaoRanChen.md
+- Week 3: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week3-HaoRanChen.md
+- Week 4: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week4-HaoRanChen.md
+## Prachi
+- Week 2: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week%202%20-Prachi.md.txt
+- Week 3: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week%203%20-Prachi.md
+- Week 4: https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/journal/Week%204%20-%20Prachi.md
 
 ### Design:
 The game uses the Greenfoot game engine. We implemented the following design patterns:
