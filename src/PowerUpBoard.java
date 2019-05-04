@@ -28,8 +28,7 @@ public class PowerUpBoard extends Board implements ISubject
     
     public void act() 
     {
-       if(count==0){
-        show(count);}
+       
     }
     
     
@@ -42,7 +41,7 @@ public class PowerUpBoard extends Board implements ISubject
      {
         notifyObservers(item) ;
      }
-    count++;
+  
      show(powerup.getCount());
     
     } public void show(int count){

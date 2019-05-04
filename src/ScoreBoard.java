@@ -31,8 +31,7 @@ public class ScoreBoard extends Board
     public void act() 
     {
         // Add your action code here.
-         if(score==0){
-        show(score);}
+      
     }
 
     public void update(Item item) {

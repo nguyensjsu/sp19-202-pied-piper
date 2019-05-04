@@ -18,7 +18,7 @@
          */
         private Number_Image number_image;
         
-        int count = 0;
+       
         private Message message1;
         
         List<Board> list=new ArrayList<Board>();
@@ -29,15 +29,14 @@
         GreenfootImage bg=new GreenfootImage("Food:",40,Color.RED,bgColor);
         bg.scale(100,50);
         setImage(bg);
-      
+        
        
     }
     
     public void act() 
     {
         // Add your action code here.
-          if(count==0){
-        show(count);}
+        
         
     }
     public void update(Item item){
@@ -49,7 +48,7 @@
      {
          notifyObservers(item);
      }
-     count++;
+     
      show(food.getCount());
     }
     public void show(int count){
