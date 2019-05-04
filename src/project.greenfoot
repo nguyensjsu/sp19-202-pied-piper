@@ -1,7 +1,7 @@
 #Greenfoot project file
 class.FinishButton.image=finish.png
 class.Food.image=burger.png
-class.LeaderBoardBackground.image=space1.jpg
+class.LeaderBoardBackground.image=leaderboard.jpg
 class.LeaderBoardUserInfo.image=ppl1.png
 class.PowerUp.image=starbucks.png
 class.Snake.image=snake.png
@@ -636,7 +636,7 @@ target9.width=80
 target9.x=0
 target9.y=0
 version=3.0.0
-width=1440
+width=1556
 world.lastInstantiated=StartGameWorld
 xPosition=0
 yPosition=0
