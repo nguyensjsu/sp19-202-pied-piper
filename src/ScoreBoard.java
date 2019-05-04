@@ -23,7 +23,7 @@ public class ScoreBoard extends Board
     
     public ScoreBoard(){
      Color bgColor = new Color(0, 0, 0, 0);
-     GreenfootImage bg=new GreenfootImage("score:",40,Color.RED,bgColor);
+     GreenfootImage bg=new GreenfootImage("Score:",40,Color.RED,bgColor);
      bg.scale(100,50);
      setImage(bg);
      

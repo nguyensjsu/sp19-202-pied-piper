@@ -20,7 +20,7 @@ public class PowerUpBoard extends Board implements ISubject
     List<Board> list= new ArrayList <Board>();
     public PowerUpBoard(){
      Color bgColor = new Color(0, 0, 0, 0);
-     GreenfootImage bg=new GreenfootImage("speed:",40,Color.RED,bgColor);
+     GreenfootImage bg=new GreenfootImage("Speed:",40,Color.RED,bgColor);
      bg.scale(100,50);
      setImage(bg);
       

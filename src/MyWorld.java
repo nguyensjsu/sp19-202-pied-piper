@@ -52,9 +52,9 @@ public class MyWorld extends World
         powerupboard.register(achievementboard);
         addObject(board,600,0);
         addObject(powerUp,375,175);
-        addObject(foodboard,50,10);
-        addObject(powerupboard,350,10);
-        addObject(scoreboard,200,10);
+        addObject(foodboard,50,15);
+        addObject(powerupboard,350,15);
+        addObject(scoreboard,200,15);
         addObject(achievementboard, 300 , 350);
         achievementboard.setLocation(600, 600);
        

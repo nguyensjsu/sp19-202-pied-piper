@@ -25,7 +25,7 @@
         public FoodBoard(){
                
         Color bgColor = new Color(0, 0, 0, 0);
-        GreenfootImage bg=new GreenfootImage("apple:",40,Color.RED,bgColor);
+        GreenfootImage bg=new GreenfootImage("Food:",40,Color.RED,bgColor);
         bg.scale(100,50);
         setImage(bg);
       

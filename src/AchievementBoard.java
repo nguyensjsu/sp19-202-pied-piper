@@ -16,7 +16,7 @@ public class AchievementBoard extends Board implements IObserver
      */
     private int score = 0;
     private int delay;
-    private static final int MAX_DELAY = 100; // or whatever works.
+    private static final int MAX_DELAY = 100; 
     private World world;
 
     private Number_Image number_image;

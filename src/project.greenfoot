@@ -1,9 +1,9 @@
 #Greenfoot project file
 class.FinishButton.image=finish.png
-class.Food.image=apple1.png
+class.Food.image=burger.png
 class.LeaderBoardBackground.image=space1.jpg
 class.LeaderBoardUserInfo.image=ppl1.png
-class.PowerUp.image=ball.png
+class.PowerUp.image=starbucks.png
 class.Snake.image=snake.png
 dependency1.from=LeaderBoardScreen
 dependency1.to=LeaderBoardComponent
@@ -262,8 +262,8 @@ dependency9.to=LeaderBoardUserInfo
 dependency9.type=UsesDependency
 editor.fx.0.height=738
 editor.fx.0.width=1474
-editor.fx.0.x=614
-editor.fx.0.y=406
+editor.fx.0.x=159
+editor.fx.0.y=544
 height=1203
 package.numDependencies=85
 package.numTargets=45
