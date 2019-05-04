@@ -27,5 +27,5 @@ Jake(Ilsoo) Kim
   For example, when snake dead, it called two times of death() methods and it makes record name and a score twice. 
   Team members gave feedback to each other and it helps to continue fix bugs.
 
-##Note
+## Note
  I am using only one account on GitHub. But sometimes when I commit, my name is "J" and sometimes my name is "Ilsoo-jake-kim".  And, committed by "J" is not included contribution graphs. 
