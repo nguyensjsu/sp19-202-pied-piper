@@ -65,7 +65,7 @@ The game uses the Greenfoot game engine. We implemented the following design pat
 - Builder - For setting up different details of snake object after snake selection
 - Decorator - For adding different color and speed to snake object
 - Decorator - For creating the snakes displayed in the character selection 
-- Observer - For calculating scores when snake eats apples and powerup balls
+- Observer - For calculating scores when snake eats food and powerups
 - Observer - For displaying player achievements
 - Composite - For displaying player ranks in leaderboard
 - Factory -For generating the Score point image.
