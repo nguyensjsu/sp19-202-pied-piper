@@ -56,8 +56,8 @@ public class LeaderBoardScreen extends World
     int score10;
     int lowestscore;
     
-    private ReplayButton sb;
-    private FinishButton eb;
+    private ReplayButton eb;
+    private FinishButton fb;
     private SnakeSelectionWorld ssw;
   
     /**
@@ -66,17 +66,17 @@ public class LeaderBoardScreen extends World
      */
     public LeaderBoardScreen()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1200, 700, 1); 
         prepare();
     }
     
     public void act() {
-        // when user press start button, go the snake selection world
-        if(Greenfoot.mouseClicked(sb)) {
+       
+        
+        if(Greenfoot.mouseClicked(eb)) {
             Greenfoot.setWorld(ssw);
         }
-        if(Greenfoot.mouseClicked(eb)) {
+        if(Greenfoot.mouseClicked(fb)) {
             Greenfoot.stop();
         }
     }
@@ -87,9 +87,6 @@ public class LeaderBoardScreen extends World
         
         
         String tempinputValue = "No Name";
-        //writefile(inputValue);
-    
-       //String tempinputScore = JOptionPane.showInputDialog("Please Your Score");
         
         br = readfile();
         String input="";
@@ -100,7 +97,6 @@ public class LeaderBoardScreen extends World
             
             ScoreBoard scb = ScoreBoard.getInstance();
             int tempinputScore= scb.getscore();
-            //System.out.println("realscore=="+realscore);
             
             /* Read data - input and tempinput from data.txt file */
             input = br.readLine();
@@ -122,13 +118,6 @@ public class LeaderBoardScreen extends World
             }
            String usertempArray[] = tempinput.split(";");
            
-           //System.out.println("tempinput=="+tempinput);
-                /* check Array[]*/
-                //for(int i=0; i < usertempArray.length; i++){
-                //System.out.println("strArray["+i+"]"+usertempArray[i]);
-                //}
-        
-        
         /* arranage score on top10.*/
         Arrays.sort(usertempArray, new Comparator<String>() {
             public int compare(String str1, String str2) {
@@ -146,22 +135,16 @@ public class LeaderBoardScreen extends World
                 
             lowestname= usertempArray[usertempArray.length-1].substring(0,usertempArray[usertempArray.length-1].indexOf(","));
             lowestscore = Integer.parseInt(usertempArray[usertempArray.length-1].substring(usertempArray[usertempArray.length-1].indexOf(",")+1, usertempArray[strArraytemp.length-1].length()));
-        
-            //System.out.println("strArraytemp.length+"+strArraytemp.length);
-            //System.out.println("lowestname+"+lowestname);
-            //System.out.println("lowestscore+"+lowestscore);
-            
-            //if(Integer.parseInt(tempinputScore)>lowestscore)
+         
+            /* get a name when score is higher than top 10's lowestscore */
             if(tempinputScore>lowestscore)
             {
-                 ImageIcon icon = new ImageIcon("snake.png");
+                /* asking a username */
                  String inputname = (String)JOptionPane.showInputDialog(null, "Please Your Name", 
-                null, JOptionPane.QUESTION_MESSAGE, icon, null, "No Name");
+                null, JOptionPane.QUESTION_MESSAGE, null, null, "No Name");
                 
-                 //String inputname = JOptionPane.showInputDialog("Please Your Name");
-                 //String inputscore = JOptionPane.showInputDialog("Please Your Score");
                  int inputscore=tempinputScore;
-                 input = input + inputname + "," + inputscore + ";"; // new name and score
+                 input = input + inputname + "," + inputscore + ";"; 
                  String strArraytemp2[] = input.split(";");
             
             if(strArraytemp2.length<11)
@@ -172,16 +155,7 @@ public class LeaderBoardScreen extends World
             }
             
             String userArray[] = input.split(";");
-            
-                for(int i=0; i < userArray.length; i++){
-                //System.out.println("strArray["+i+"]"+userArray[i]);
-                    //String intArray[] = strArray[i].split(",");
-                    //for(int j=0; j < intArray.length; j++){
-                    //System.out.println("intArray["+j+"]"+intArray[j]);
-                    //}
-                }
-        
-        
+           
             Arrays.sort(userArray, new Comparator<String>() {
             public int compare(String str1, String str2) {
                 String substr1 = str1.substring(str1.indexOf(",")+1, str1.length());
@@ -191,8 +165,6 @@ public class LeaderBoardScreen extends World
             }
         });
 
-            //System.out.println(Arrays.toString(strArray));
-           
             name1= userArray[0].substring(0,userArray[0].indexOf(","));
             score1 = Integer.parseInt(userArray[0].substring(userArray[0].indexOf(",")+1, userArray[0].length()));
         
@@ -223,12 +195,12 @@ public class LeaderBoardScreen extends World
             name10= userArray[9].substring(0,userArray[9].indexOf(","));
             score10 = Integer.parseInt(userArray[9].substring(userArray[9].indexOf(",")+1, userArray[9].length()));
         
-            
+            /* file write */
             writefile(name1+","+score1+";"+name2+","+score2+";"+name3+","+score3+";"+name4+","+score4+";"+name5+","+score5+";"
             +name6+","+score6+";"+name7+","+score7+";"+name8+","+score8+";"+name9+","+score9+";"+name10+","+score10+";");
             
             }
-            else{ /* When Score is less than top10 */
+            else{ /* When Score is less than top10 - just show the leaderboard*/
               
             name1= usertempArray[0].substring(0,usertempArray[0].indexOf(","));
             score1 = Integer.parseInt(usertempArray[0].substring(usertempArray[0].indexOf(",")+1, usertempArray[0].length()));
@@ -268,26 +240,21 @@ public class LeaderBoardScreen extends World
         } catch (IOException ex) {
             ex.printStackTrace();
         } 
-    
+        
+        /* composite pattern for leaderboard */
         leaderboardcomponent = new LeaderBoardComposite();
         
         LeaderBoardComponent LeaderBoardbackground = new LeaderBoardBackground();
         addObject(LeaderBoardbackground, 600,350);
         leaderboardcomponent.addChild(LeaderBoardbackground);
         
-        sb = new ReplayButton();
-        addObject(sb, 550, 650);
-        ssw = new SnakeSelectionWorld();
-      
-        eb = new FinishButton();
-        addObject(eb, 700, 650);
-        ssw = new SnakeSelectionWorld();
         
-        LeaderBoardComponent LeaderBoardTitle = new LeaderBoardTitle("LEADER BOARD",600,50);
+        
+        LeaderBoardComponent LeaderBoardTitle = new LeaderBoardTitle("  LEADER", "BOARD", 550,110);
         addObject(LeaderBoardTitle, 0, 0);
         leaderboardcomponent.addChild(LeaderBoardTitle);
         
-        LeaderBoardComponent LeaderBoardTitle2 = new LeaderBoardTitle("Top 10 Ranking ",600,75);
+        LeaderBoardComponent LeaderBoardTitle2 = new LeaderBoardTitle("Top 10","Ranking",550,145);
         addObject(LeaderBoardTitle2, 0, 0);
         leaderboardcomponent.addChild(LeaderBoardTitle2);
         
@@ -405,9 +372,18 @@ public class LeaderBoardScreen extends World
         //component print
         leaderboardcomponent.printOnScreen();
         
+        eb = new ReplayButton();
+        addObject(eb, 550, 650);
+        ssw = new SnakeSelectionWorld();
+      
+        fb = new FinishButton();
+        addObject(fb, 700, 650);
+        ssw = new SnakeSelectionWorld();
+        
+        
     }
     
-    
+    /* write file */
     public void writefile(String inputValue)
     {
     FileWriter filewriter = null;
@@ -428,7 +404,7 @@ public class LeaderBoardScreen extends World
             }
         }    
     }   
-
+    /* read file */
     public BufferedReader readfile()
     {
         try

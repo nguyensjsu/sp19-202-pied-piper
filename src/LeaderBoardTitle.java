@@ -9,12 +9,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class LeaderBoardTitle extends LeaderBoardComponent
 {
     private String title="";
+    private String title2="";
     private int posX;
     private int posY;
     
-    public LeaderBoardTitle(String text, int x, int y)
+    public LeaderBoardTitle(String text, String text2, int x, int y)
     {
         title=text;
+        title2=text2;
         posX=x;
         posY=y;
     }
@@ -29,7 +31,11 @@ public class LeaderBoardTitle extends LeaderBoardComponent
     } 
     
     public void printOnScreen() {
-    getWorld().showText(title, posX, posY);
+        //Add snake mode description 
+        Label l1 = new Label(title, 40, Color.WHITE);
+        getWorld().addObject(l1, posX, posY);
+        Label l2 = new Label(title2, 40, Color.WHITE);
+        getWorld().addObject(l2, posX+152, posY);
     }
     
     public void addChild(LeaderBoardComponent c){}

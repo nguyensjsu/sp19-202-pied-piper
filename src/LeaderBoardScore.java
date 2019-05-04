@@ -31,7 +31,9 @@ public class LeaderBoardScore extends LeaderBoardComponent
     }    
     
      public void printOnScreen() {
-        getWorld().showText(""+score, posX, posY);
+        Label l1 = new Label(""+score, 30, Color.WHITE);
+        getWorld().addObject(l1, posX+60, posY+82);
+        //getWorld().showText(""+score, posX, posY);
     }
      
     public void addChild(LeaderBoardComponent c){}
