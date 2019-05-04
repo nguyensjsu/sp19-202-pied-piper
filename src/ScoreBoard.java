@@ -69,9 +69,9 @@ public class ScoreBoard extends Board
      hundredsspace=new NumberSpace(hundreds);
      hundredsspace.set_the_Image();
      
-     world.addObject(unitsspace,660,70);
-     world.addObject(digitsspace,610,70);
-     world.addObject(hundredsspace,560,70);
+     world.addObject(unitsspace,360,70);
+     world.addObject(digitsspace,310,70);
+     world.addObject(hundredsspace,260,70);
     }
     
     public static ScoreBoard getInstance() {

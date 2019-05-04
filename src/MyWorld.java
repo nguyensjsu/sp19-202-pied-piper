@@ -12,6 +12,9 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
+    private Message message1;
+    private Message message2;
+    private Message message3;
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -31,7 +34,7 @@ public class MyWorld extends World
     private void prepare()
     {
         //addObject(new Snake(), 125, 125);
-        this.setPaintOrder(AchievementBoard.class, NumberSpace.class,FoodBoard.class,PowerUpBoard.class,ScoreBoard.class);
+        this.setPaintOrder(Message.class,AchievementBoard.class, NumberSpace.class,FoodBoard.class,PowerUpBoard.class,ScoreBoard.class);
         
         //Snake snake=new Snake();
         Board board=new Board();
@@ -51,10 +54,9 @@ public class MyWorld extends World
         addObject(board,600,0);
         addObject(powerUp,375,175);
         addObject(foodboard,50,10);
-        addObject(powerupboard,1150,10);
-        addObject(scoreboard,600,10);
-        addObject(achievementboard, 300 , 350);
-        achievementboard.setLocation(600, 600);
-       
+        addObject(powerupboard,600,10);
+        addObject(scoreboard,300,10);
+        message3 = new Message("Achievements : ", 250, 80);
+        addObject(message3, 800, 20);
     }
 }
