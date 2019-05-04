@@ -51,8 +51,8 @@ public class MyWorld extends World
         addObject(board,600,0);
         addObject(powerUp,375,175);
         addObject(foodboard,50,10);
-        addObject(powerupboard,1150,10);
-        addObject(scoreboard,600,10);
+        addObject(powerupboard,350,10);
+        addObject(scoreboard,200,10);
         addObject(achievementboard, 300 , 350);
         achievementboard.setLocation(600, 600);
        

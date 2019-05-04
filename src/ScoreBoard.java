@@ -31,6 +31,8 @@ public class ScoreBoard extends Board
     public void act() 
     {
         // Add your action code here.
+         if(score==0){
+        show(score);}
     }
 
     public void update(Item item) {
@@ -69,9 +71,9 @@ public class ScoreBoard extends Board
      hundredsspace=new NumberSpace(hundreds);
      hundredsspace.set_the_Image();
      
-     world.addObject(unitsspace,660,70);
-     world.addObject(digitsspace,610,70);
-     world.addObject(hundredsspace,560,70);
+     world.addObject(unitsspace,260,70);
+     world.addObject(digitsspace,210,70);
+     world.addObject(hundredsspace,160,70);
     }
     
     public static ScoreBoard getInstance() {
