@@ -62,8 +62,12 @@ public class PowerUpBoard extends Board implements ISubject
      
     
      //world.addObject(digitsspace,50,50);
-    world.addObject(unitsspace,390,70);
-     world.addObject(digitsspace,340,70);
+
+     world.addObject(unitsspace,635,70);
+     world.addObject(digitsspace,585,70);
+
+     //world.addObject(unitsspace,390,70);
+     //world.addObject(digitsspace,340,70);
      
     }
     

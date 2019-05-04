@@ -90,17 +90,17 @@ public class SnakeSelectionWorld extends World
         Label l33 = new Label("The classic snake experience.\nPowerups speed up the snake.\nThe starting length is normal.", 15, Color.BLACK);
         addObject(l33, 500, 390);
         
-        addObject(achievementBoard, 300 , 350);
+        addObject(achievementBoard, 100 , 380);
         Food food = new Food();
-        addObject(food ,180,340);
-        PowerUp powerUp = new PowerUp();
-        addObject(powerUp,180,380);
-        message1 = new Message("* 5 = +50", 250, 80);
-        addObject(message1, 330, 350);
-        message2 = new Message("* 5 = +50", 250, 80);
-        addObject(message2, 330, 390);
-        message3 = new Message("Achievements", 250, 80);
-        addObject(message3, 350, 320);
+        addObject(food ,250,380);
+        message1 = new Message("+ 5 = 10 ", 250, 80);
+        addObject(message1, 400, 380);
+        message3 = new Message("Achievements : ", 250, 80);
+        addObject(message3, 150, 380);
+        PowerUp powerup = new PowerUp();
+        addObject(powerup ,450,380);
+        message2 = new Message("+ 5 = 10 ", 250, 80);
+        addObject(message2, 800, 380);
     }
 
     /*Choose different kinds snake by mouse click*/

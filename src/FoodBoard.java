@@ -19,6 +19,7 @@
         private Number_Image number_image;
         
         int count = 0;
+        private Message message1;
         
         List<Board> list=new ArrayList<Board>();
         
@@ -69,6 +70,10 @@
     
      world.addObject(unitsspace,75,70);
      world.addObject(digitsspace,25,70);
+     
+     //message1 = new Message("Congratulations you won 10 bonus points", 350, 80);
+     
+     //world.addObject(message1, 1000, 20);
     }
     
     public void register(Board board)
@@ -83,7 +88,6 @@
     public void notifyObservers(Item item)
     {
         AchievementBoard achievementBoard=(AchievementBoard)list.get(0);
-        
         achievementBoard.update(item);
     }
     
