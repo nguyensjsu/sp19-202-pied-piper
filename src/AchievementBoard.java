@@ -52,12 +52,16 @@ public class AchievementBoard extends Board implements IObserver
         currentscore = currentscore + 10;
         scoreboard.setScore(currentscore);  
         
-        //world=this.getWorld();
-        
     }
     
-    public void show(int a){
-        
+    public void show(int a , World world){
+        if(a % 5 == 0 && a != 0){
+        message1 = new Message("10 Bonus points unlocked", 350, 100);
+        World world1 = world;
+        world1.addObject(message1, 850, 50);
+        }else{
+        world.removeObject(message1);
+        }
     }
     
     
