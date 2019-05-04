@@ -121,6 +121,8 @@ The game uses the Greenfoot game engine. We implemented the following design pat
 - Helped to draw the whole group sequence diagram.
 - Helped to do the ppt.
 - Helped team member to solve the code problem and conflict problem.
+
+-Note: Haoran's commits on April 26th jeopardized the Master branch, requiring a deletion of the current branch which required reversion back to a previous version. (Commit: ed8613d550145258d81659bc66fda1c086b3d799) Thus, there is an inflation of contributions due to this oversight. (14,634 additions,  9,647 deletions)
       
 
 ## Prachi
