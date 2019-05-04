@@ -28,4 +28,4 @@ Jake(Ilsoo) Kim
   Team members gave feedback to each other and it helps to continue fix bugs.
 
 ## Note
- I am using only one account on GitHub. But sometimes when I commit, my name is "J" and sometimes my name is "Ilsoo-jake-kim".  And, committed by "J" is not included contribution graphs. 
+ I am using only one account on GitHub. But sometimes when I commit, my name is "J" and sometimes my name is "Ilsoo-jake-kim".  And committed by "J" is not included contribution graphs. 
