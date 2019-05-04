@@ -85,12 +85,6 @@
             }
         }
 
-    // public Snake() {
-    //     //snakeSpeed = this.snakeSpeed;
-    //     //snakeColor = this.snakeColor;
-    //     //snakeLife = this.snakeLife;
-    // }
-    
     public void wrapSnakeDecorator(ISnakeDecorator sd) {
         this.snakeDecorator = sd;
     }
@@ -134,19 +128,27 @@
 
         if (Greenfoot.isKeyDown("left"))
         {
-            setRotation(180);
+            if (getRotation() != 0){
+                setRotation(180);
+            }
         }
         if (Greenfoot.isKeyDown("right"))
         {
-            setRotation(0);
+            if (getRotation() != 180){
+                setRotation(0);
+            }
         }
         if (Greenfoot.isKeyDown("up"))
         {
-            setRotation(270);
+            if (getRotation() != 90){
+                setRotation(270);
+            }
         }
         if (Greenfoot.isKeyDown("down"))
         {
-            setRotation(90);
+            if (getRotation() != 270){
+                setRotation(90);
+            }
         }
         
         if(isTouching(PowerUp.class)){

@@ -23,7 +23,7 @@ public class ScoreBoard extends Board
     
     public ScoreBoard(){
      Color bgColor = new Color(0, 0, 0, 0);
-     GreenfootImage bg=new GreenfootImage("score:",40,Color.RED,bgColor);
+     GreenfootImage bg=new GreenfootImage("Score:",40,Color.RED,bgColor);
      bg.scale(100,50);
      setImage(bg);
      
@@ -71,9 +71,12 @@ public class ScoreBoard extends Board
      hundredsspace=new NumberSpace(hundreds);
      hundredsspace.set_the_Image();
      
-     world.addObject(unitsspace,260,70);
-     world.addObject(digitsspace,210,70);
-     world.addObject(hundredsspace,160,70);
+     world.addObject(unitsspace,360,70);
+     world.addObject(digitsspace,310,70);
+     world.addObject(hundredsspace,260,70);
+     //world.addObject(unitsspace,260,70);
+     //world.addObject(digitsspace,210,70);
+     //world.addObject(hundredsspace,160,70);
     }
     
     public static ScoreBoard getInstance() {
