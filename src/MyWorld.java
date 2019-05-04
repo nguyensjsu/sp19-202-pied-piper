@@ -60,6 +60,32 @@ public class MyWorld extends World
         addObject(scoreboard,300,10);
         message3 = new Message("Achievements : ", 250, 80);
         addObject(message3, 800, 20);
+        
+        GreenfootImage image=new GreenfootImage("number_0.jpg");
+        
+        NumberSpace initial=new NumberSpace(image);
+        NumberSpace initial2=new NumberSpace(image);
+        NumberSpace initial3=new NumberSpace(image);
+        NumberSpace initial4=new NumberSpace(image);
+        NumberSpace initial5=new NumberSpace(image);
+        NumberSpace initial6=new NumberSpace(image);
+        NumberSpace initial7=new NumberSpace(image);
+        initial.set_the_Image();
+        initial2.set_the_Image();
+        initial3.set_the_Image();
+        initial4.set_the_Image();
+        initial5.set_the_Image();
+        initial6.set_the_Image();
+        initial7.set_the_Image();
+      
+        addObject(initial,75,70);
+        addObject(initial2,25,70);
+        addObject(initial3,635,70);
+        addObject(initial4,585,70);
+        addObject(initial5,310,70);
+        addObject(initial6,360,70);
+        addObject(initial7,260,70);
+         
 
     }
 }
