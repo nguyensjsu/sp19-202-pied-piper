@@ -21,9 +21,11 @@ public class MyWorld extends World
 
        
         super(1200, 700, 1); 
-        GreenfootImage tile = new GreenfootImage(50,50);
-        tile.drawRect(0,0,50,50);
-        setBackground(tile);
+        //GreenfootImage tile = new GreenfootImage(50,50);
+        //tile.drawRect(0,0,50,50);
+        //setBackground(tile);
+        GreenfootImage bg = new GreenfootImage("bg.png");
+        setBackground(bg);
         prepare();
     }
 
@@ -58,5 +60,6 @@ public class MyWorld extends World
         addObject(scoreboard,300,10);
         message3 = new Message("Achievements : ", 250, 80);
         addObject(message3, 800, 20);
+
     }
 }

@@ -8,15 +8,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class SnakeSelectionWorld extends World
 {
+    // Decorators for playable snake object
     private BlueSnakeDecorator bsd;
     private GreenSnakeDecorator gsd;
     private RedSnakeDecorator rsd;
-    //private SpeedDecorator sd;
 
-    private GreenSnake gsnake;
-    private BlueSnake bsnake;
-    private RedSnake rsnake;
-    
+    // Decorators for menu/selectable snake objects
+    private MenuSnake ms;
+    private MenuSnake ms2;
+    private MenuSnake ms3;
+    private BlueMenuSnake bms;
+    private RedMenuSnake rms;
+        
     private AchievementBoard achievementBoard;
     private Message message1;
     private Message message2;
@@ -35,9 +38,21 @@ public class SnakeSelectionWorld extends World
         GreenfootImage background = new GreenfootImage("snakeSelectionBg.png");
         background.scale(getWidth(), getHeight());
         setBackground(background);
-        gsnake = new GreenSnake();
-        bsnake = new BlueSnake();
-        rsnake = new RedSnake();
+        
+        // Prepare Green Snake
+        ms = new MenuSnake();       
+        ms.displaySnake();
+        // Prepare Blue Snake
+        ms2 = new MenuSnake();
+        bms = new BlueMenuSnake();
+        ms2.wrapSnakeMenuDecorator(bms);
+        ms2.displaySnake();
+        // Prepare Red Snake    
+        ms3 = new MenuSnake();
+        rms = new RedMenuSnake();
+        ms3.wrapSnakeMenuDecorator(rms);
+        ms3.displaySnake();
+                
         achievementBoard = new AchievementBoard();
         prepare();
         //initialize myworld
@@ -54,7 +69,7 @@ public class SnakeSelectionWorld extends World
     private void prepare()
     {   
         /* add green snake */
-        addObject(gsnake, 100, 150);
+        addObject(ms, 100, 150);
         //Add snake mode description 
         Label l1 = new Label("Easy", 22, Color.GREEN);
         addObject(l1, 180, 350);
@@ -62,14 +77,14 @@ public class SnakeSelectionWorld extends World
         addObject(l11, 100, 390);
 
         /* add blue snake */
-        addObject(bsnake, 280, 150);
+        addObject(ms2, 280, 150);
         Label l2 = new Label("Hard", 22, Color.BLUE);
         addObject(l2, 370, 350);
         Label l22 = new Label("The fastest snake. Powerups\nwill slow down the snake.", 15, Color.BLACK);
         addObject(l22, 310, 398);
 
         /* add red snake */
-        addObject(rsnake, 470, 150);
+        addObject(ms3, 470, 150);
         Label l3 = new Label("Classic", 22, Color.RED);
         addObject(l3, 550, 350);
         Label l33 = new Label("The classic snake experience.\nPowerups speed up the snake.\nThe starting length is normal.", 15, Color.BLACK);
@@ -91,7 +106,7 @@ public class SnakeSelectionWorld extends World
     /*Choose different kinds snake by mouse click*/
     public void act() {
         // add snake to myworld and jump to myworld
-        if(Greenfoot.mouseClicked(gsnake)) {
+        if(Greenfoot.mouseClicked(ms)) {
             /** Create snake objecr by Builder Design Partern**/
             snake = new Snake.Builder(gsd)
                     .snakeColor()
@@ -104,7 +119,7 @@ public class SnakeSelectionWorld extends World
             world.addObject(snake, 175, 125);
             snake.prepare();
             Greenfoot.setWorld(world);
-        } else if (Greenfoot.mouseClicked(bsnake)) {
+        } else if (Greenfoot.mouseClicked(ms2)) {
             //
             snake = new Snake.Builder(bsd)
                     .snakeColor()
@@ -116,7 +131,7 @@ public class SnakeSelectionWorld extends World
             world.addObject(snake, 175, 125);
             snake.prepare();
             Greenfoot.setWorld(world);
-        } else if (Greenfoot.mouseClicked(rsnake)) {
+        } else if (Greenfoot.mouseClicked(ms3)) {
             snake = new Snake.Builder(rsd)
                     .snakeColor()
                     .snakeSpeed()

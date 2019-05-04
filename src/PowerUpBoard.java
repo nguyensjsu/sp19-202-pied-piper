@@ -16,11 +16,11 @@ public class PowerUpBoard extends Board implements ISubject
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private Number_Image number_image;
-    
+    private int count=0;
     List<Board> list= new ArrayList <Board>();
     public PowerUpBoard(){
      Color bgColor = new Color(0, 0, 0, 0);
-     GreenfootImage bg=new GreenfootImage("speed:",40,Color.RED,bgColor);
+     GreenfootImage bg=new GreenfootImage("Speed:",40,Color.RED,bgColor);
      bg.scale(100,50);
      setImage(bg);
       
@@ -28,7 +28,8 @@ public class PowerUpBoard extends Board implements ISubject
     
     public void act() 
     {
-      
+       if(count==0){
+        show(count);}
     }
     
     
@@ -41,7 +42,7 @@ public class PowerUpBoard extends Board implements ISubject
      {
         notifyObservers(item) ;
      }
-    
+    count++;
      show(powerup.getCount());
     
     } public void show(int count){
@@ -61,8 +62,12 @@ public class PowerUpBoard extends Board implements ISubject
      
     
      //world.addObject(digitsspace,50,50);
-     world.addObject(unitsspace,675,70);
-     world.addObject(digitsspace,625,70);
+
+     world.addObject(unitsspace,635,70);
+     world.addObject(digitsspace,585,70);
+
+     //world.addObject(unitsspace,390,70);
+     //world.addObject(digitsspace,340,70);
      
     }
     

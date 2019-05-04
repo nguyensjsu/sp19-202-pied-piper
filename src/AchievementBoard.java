@@ -16,6 +16,7 @@ public class AchievementBoard extends Board implements IObserver
      */
     private int score = 0;
 
+
     private Number_Image number_image;
     private Food food;
     private static int count = 0;
@@ -50,6 +51,9 @@ public class AchievementBoard extends Board implements IObserver
         int currentscore = scoreboard.getscore();
         currentscore = currentscore + 10;
         scoreboard.setScore(currentscore);  
+        
+        //world=this.getWorld();
+        
     }
     
     public void show(int a){
