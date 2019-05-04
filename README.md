@@ -27,7 +27,7 @@ Week 2: Creation of base game with board, (tile based system) snake logic, item/
 
 Week 3: Improve snake attribute speed decorator, implementation of factory pattern for scoreboard
 
-Week 4: Implementation of command design pattern for controls, polished logic for snake growth, improved item spawn logic, improved overall UI design, lots of bug fixing
+Week 4: Implementation of command design pattern for controls, polished logic for snake growth, improved item spawn logic, improved overall UI design, lots of bug fixing. and HaoRan chen cleaned master branch by mistake, and have to commit many times to solve the conflict, so it's a little mess in insight, Sorry for the troubles.
 
 ### Sprint Task Sheet
 ![](https://github.com/nguyensjsu/sp19-202-pied-piper/blob/master/docs/Sprint%20Task%20Sheet.PNG)
