@@ -111,7 +111,7 @@ The game uses the Greenfoot game engine. We implemented the following design pat
 - Helped creating a video for the game.
 - Contributed to generate the burndown chart. 
 - Helped in achievements board.
-
+-Note:  I am using only one account on GitHub. But sometimes when I commit, my name is "J" and sometimes my name is "Ilsoo-jake-kim".  And committed by "J" is not included contribution graphs. 
 
 ## Haoran
 - Implemented Observer pattern  to monitor apple state, and notify the food board score board and speedboard.
